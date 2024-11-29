@@ -13,7 +13,7 @@
   >   
         <v-col column cols="12">
           <p style=" color: rgb(177, 178, 179);"> 
-          <span class=" white--text display-1 font-weight-bold d-flex justify-center mb-4">Hi,I am Gokul S</span>
+          <span cslass=" white--text display-1 font-weight-bold d-flex justify-center mb-4">Hi,I am Gokul S</span>
           
           As a full-stack web developer
           with a passion for blockchain and finance, I leverage my diverse
