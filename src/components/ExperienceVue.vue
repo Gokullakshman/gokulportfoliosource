@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-row class=" black">
+        <v-row >
         <v-col cols="12" xs="12" md="12" class="d-flex justify-center">
             <span class="white--text text-h4 font-weight-bold">Experience</span>
         </v-col>
@@ -10,7 +10,7 @@
         
     </v-row> 
 
-    <v-row class="black ">
+    <v-row >
         <v-col class="d-flex justify-center mb-6">
             <v-card outlined  @mouseover="expand=true" @mouseleave="expand=false" class="black" style="box-shadow: #854CE6 0px 0px 1px 2px;" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
                 <v-row >

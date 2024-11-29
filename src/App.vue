@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="background: linear-gradient(135deg, #46293d, #161638);">
   
 
     <v-main>

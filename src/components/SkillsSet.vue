@@ -1,6 +1,6 @@
 <template>
   <div>
-     <v-row class="black">
+     <v-row >
   <v-col cols="12" xs="12" md="12" class="d-flex justify-center display-1 font-weight-bold white--text ">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">
     <p style=" color: rgb(177, 178, 179);" :class="{'d-flex justify-center font-weight-medium text-h6':$vuetify.breakpoint.mdAndUp ,'text-h6 font-weight-medium':$vuetify.breakpoint.mobile}">

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-row class="black">
+        <v-row >
             <v-col cols="12" md="12" xs="12">
                 <p class="white--text text-h4 d-flex justify-center font-weight-medium">Education</p>
             </v-col>

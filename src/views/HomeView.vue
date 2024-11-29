@@ -1,6 +1,6 @@
 <template>  
 <div fill-height class="" >
-  <v-row class="black" >
+  <v-row  >
     <v-col xs12  >
     <!-- For Mobile: Show only Portfolio -->
     <v-row class="pa-1 " >
@@ -32,7 +32,7 @@
    
 
     <!-- For Desktop and Larger: Show Full Menu -->
-    <v-layout justify-center align-center v-show="$vuetify.breakpoint.mdAndUp" class="black pa-4 mt-4">
+    <v-layout justify-center align-center v-show="$vuetify.breakpoint.mdAndUp" class=" pa-4 mt-4">
       <v-flex md3 >
         <span class="white--text">Portfolio</span>
       </v-flex>

@@ -8,7 +8,7 @@
     md="6"
     xs="12"
     :class="{'d-flex justify-end pl-10 text-center text-h6':$vuetify.breakpoint.mdAndUp,
-      'd-flex justify-end pl-10 black text-center pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
+      'd-flex justify-end pl-10  text-center pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
     v-show="$vuetify.breakpoint.mdAndUp"
   >   
         <v-col column cols="12">
@@ -60,11 +60,7 @@
 
 </v-row>   
 
-<v-row class="black">
-  <v-col  xs="12" md="6" row class="d-flex justify-center">
-  
-  </v-col>
-</v-row>
+
 
 </v-container>
 
