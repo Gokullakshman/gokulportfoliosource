@@ -25,6 +25,7 @@
       class="input"
       required
       :style="$vuetify.breakpoint.mdAndUp? 'input' : {height:'60px',width:'310px'}" 
+      v-model="mailDetails.youremail"
     />
                     </v-col>
                     <v-col cols="12" md="12"  class="d-flex justify-center">
@@ -35,6 +36,7 @@
       class="input"
       required
       :style="$vuetify.breakpoint.mdAndUp? 'input' : {height:'60px',width:'310px'}" 
+      v-model="mailDetails.yourname"
     />
                     </v-col>
                     <v-col cols="12" md="12"  class="d-flex justify-center">
@@ -45,13 +47,14 @@
       class="input"
       required
       :style="$vuetify.breakpoint.mdAndUp? 'input' : {height:'60px',width:'310px'}" 
+      v-model="mailDetails.subject"
     />
                     </v-col>
                     <v-col  xs="12" class="d-flex justify-center">
-                       <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" ></textarea>
+                       <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" v-model="mailDetails.description"></textarea>
                     </v-col>
                     <v-col  xs="10" class="d-flex justify-center px-10">
-                       <v-btn class="black--text font-weight-bold " style="background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);" block height="40">Send</v-btn>
+                       <v-btn class="black--text font-weight-bold " style="background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);" block height="40" @click="SendEmail()">Send</v-btn>
                     </v-col>
                 </v-row>
 
@@ -65,6 +68,39 @@
         </v-row>
     </div>
 </template>
+<script>
+// import EventService from '@/services/EventService';
+export default{
+    data(){
+        return{
+            mailDetails:{
+                youremail:"",
+                yourname:"",
+                subject:"",
+                description:""
+            }
+        }
+    },
+    methods:{
+        SendEmail(){
+            if(this.mailDetails.youremail=="" || this.mailDetails.subject == "" ){
+                return
+            }else{
+                var input={
+                  yourEmail:this.mailDetails.youremail,
+                  yourName:this.mailDetails.yourname,
+                  subject:this.mailDetails.subject,
+                  description:this.mailDetails.description
+                }
+                console.log("input",input)
+               
+            }
+        }
+    }
+}
+
+</script>
+
 <style>
 .contact {
   background: linear-gradient(135deg, #46293d, #161638);

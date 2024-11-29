@@ -12,8 +12,8 @@
     v-show="$vuetify.breakpoint.mdAndUp"
   >   
         <v-col column cols="12">
-          <p style=" color: rgb(177, 178, 179);"> 
-          <span cslass=" white--text display-1 font-weight-bold d-flex justify-center mb-4">Hi,I am Gokul S</span>
+          <p style=" color: rgb(177, 178, 179);" class=""> 
+          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter">Hi,I am Gokul S</span>
           
           As a full-stack web developer
           with a passion for blockchain and finance, I leverage my diverse
@@ -66,3 +66,26 @@
 
  
 </template>
+<style>
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+ /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(20, end),
+    blink-caret .75s step-end infinite;
+    color: orange;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+
+
+</style>
