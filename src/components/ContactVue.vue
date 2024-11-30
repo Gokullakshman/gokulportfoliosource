@@ -65,11 +65,15 @@
           
 
             </v-col>
-        </v-row>
+        </v-row> 
+      
+      <FooterVue></FooterVue>
+
     </div>
 </template>
 <script>
 // import EventService from '@/services/EventService';
+import FooterVue from './FooterVue.vue'
 export default{
     data(){
         return{
@@ -80,6 +84,9 @@ export default{
                 description:""
             }
         }
+    },
+    components:{
+      FooterVue
     },
     methods:{
         SendEmail(){
