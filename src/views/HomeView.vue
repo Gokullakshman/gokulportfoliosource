@@ -45,7 +45,10 @@
             <v-btn text class="white--text">Skills</v-btn>
           </v-flex>
           <v-flex>
-            <v-btn text class="white--text">Experience</v-btn>
+            <router-link to="/experience">
+              <v-btn text class="white--text">Experience</v-btn>
+            </router-link>
+       
           </v-flex>
           <v-flex>
             <v-btn text class="white--text">Projects</v-btn>
@@ -54,8 +57,10 @@
             <v-btn text class="white--text">Education</v-btn>
           </v-flex>
           <v-flex>
-            <v-btn text class="white--text">Contact</v-btn>
-          </v-flex>
+  <router-link to="/contact#contact">
+    <v-btn text class="white--text">Contact</v-btn>
+  </router-link>
+</v-flex>
           <v-flex>
             <v-btn outlined rounded color="#854CE6">LinkedIn Profile</v-btn>
           </v-flex>

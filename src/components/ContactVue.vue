@@ -1,7 +1,7 @@
 
 
 <template>
-    <div>
+    <div id="contact">
         <v-row class="pt-10 ">
             <v-col cols="12" md="12" xs="12" >
                 <span class="white--text d-flex justify-center text-h5 font-weight-bold">Contact US</span>
