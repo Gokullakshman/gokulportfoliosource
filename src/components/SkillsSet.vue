@@ -86,7 +86,7 @@ class="custom-outline black"
  </v-col> 
 
  <v-row class="mb-6">
-  <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-6 ml-5">
+  <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-6 ml-2">
     <v-card
 outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"

@@ -28,4 +28,29 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Debug overflow issues (optional) */
+* {
+  box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+/* Additional utility to prevent overflowing elements */
+.v-app {
+  overflow-x: hidden;
+}
+.app-layout {
+  overflow: hidden; /* Prevent unnecessary scrolling */
+}
+
+.main-layout {
+  overflow-y: auto; /* Ensure content scrolls only within the main area */
+  height: 100vh; /* Fit the viewport height */
+}
+
 </style>

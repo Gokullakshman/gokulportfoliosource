@@ -54,7 +54,7 @@
                        <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" v-model="mailDetails.description"></textarea>
                     </v-col>
                     <v-col  xs="10" class="d-flex justify-center px-10">
-                       <v-btn class="black--text font-weight-bold " style="background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);" block height="40" @click="SendEmail()">Send</v-btn>
+                       <v-btn class="black--text font-weight-bold " style="background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);" block height="40" @click="SendEmailProcess()">Send</v-btn>
                     </v-col>
                 </v-row>
 
@@ -72,7 +72,7 @@
     </div>
 </template>
 <script>
-// import EventService from '@/services/EventService';
+import EventService from '@/services/EventService';
 import FooterVue from './FooterVue.vue'
 export default{
     data(){
@@ -89,17 +89,40 @@ export default{
       FooterVue
     },
     methods:{
-        SendEmail(){
+        SendEmailProcess(){
             if(this.mailDetails.youremail=="" || this.mailDetails.subject == "" ){
                 return
             }else{
+  
                 var input={
                   yourEmail:this.mailDetails.youremail,
                   yourName:this.mailDetails.yourname,
                   subject:this.mailDetails.subject,
                   description:this.mailDetails.description
                 }
-                console.log("input",input)
+                console.log("input",input) 
+
+                EventService.sendEmail(input).then(
+                    (response) =>{
+                        this.$toast("Email Sent Successfully!", {
+  position: "bottom-right",
+  timeout: 5000,
+  closeOnClick: true,
+  pauseOnFocusLoss: true,
+  pauseOnHover: true,
+  draggable: true,
+  draggablePercent: 0.6,
+  showCloseButtonOnHover: false,
+  hideProgressBar: false,
+  closeButton: "button",
+  icon: true,
+  rtl: false
+});
+                        console.log("success",response)
+                    }
+                ).catch( (response) => {
+                    console.log("error",response)
+                });
                
             }
         }

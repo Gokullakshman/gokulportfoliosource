@@ -7,10 +7,9 @@
       <v-col sm="12" class="d-md-none ">
         <v-row>
           <v-col cols="1"></v-col>
-          <v-col cols="6" class="d-flex ">
-            <v-icon class=" white" outlined :min-height="$vuetify.breakpoint.xs ? 300 : '20vh'"
-            :rounded="$vuetify.breakpoint.xsOnly" >mdi-face-man-profile</v-icon>
-            <span class="white--text pl-4">Portfolio</span>
+          <v-col cols="6" class="mt-4 ">
+            <v-icon large color="orange" >mdi-face-man-profile</v-icon>
+            <span class="orange--text pl-4 font-weight-bold" >Portfolio</span>
           </v-col>
           <v-spacer></v-spacer>
           <v-col class="d-flex justify-end">

@@ -5,7 +5,7 @@
                 <p class="white--text text-h4 d-flex justify-center font-weight-medium">Education</p>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-                <p  style="max-width: 600px;color: rgb(177, 178, 179);" class=" font-weight-light  text-center d-flex justify-center"  :class="{'text-h6':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
+                <p  style="max-width: 600px;color: rgb(177, 178, 179);" class="text-h6 font-weight-medium  text-center d-flex justify-center"  :class="{'text-h6':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
             </v-col>
 
             <v-col md="12" xs="12" class="d-flex justify-center" v-for="(n,index) in EducationDetails" :key="index">

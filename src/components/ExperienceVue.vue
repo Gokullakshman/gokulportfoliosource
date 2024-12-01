@@ -5,7 +5,7 @@
             <span class="white--text text-h4 font-weight-bold">Experience</span>
         </v-col>
         <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-            <p  class="text-center font-weight-light"    :class="{'text-h6':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;color: rgb(177, 178, 179);">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
+            <p  class="text-center text-h6 font-weight-medium"    :class="{'text-h6':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;color: rgb(177, 178, 179);">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
         </v-col>
         
     </v-row> 
