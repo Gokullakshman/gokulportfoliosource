@@ -31,41 +31,35 @@
    
 
     <!-- For Desktop and Larger: Show Full Menu -->
-    <v-layout justify-center align-center v-show="$vuetify.breakpoint.mdAndUp" class=" pa-4 mt-4">
-      <v-flex md3 >
-        <span class="white--text">Portfolio</span>
-      </v-flex>
-      <v-flex md4>
-        <v-layout >
-          <v-flex>
+    <v-row justify-end align-center v-show="$vuetify.breakpoint.mdAndUp" class=" pa-4 mt-4">
+      <v-col md="3" class="d-flex justify-end align-center">
+        <v-icon large color="orange" >mdi-face-man-profile</v-icon>&nbsp;&nbsp;
+        <span   class="white--text" style=" font: bold 1.5rem sans-serif;">Portfolio</span>
+      </v-col>
+      <v-col md="9">
+        <ul>
+          <li>
             <v-btn text class="white--text">About</v-btn>
-          </v-flex>
-          <v-flex>
+          </li>
+          <li>
             <v-btn text class="white--text">Skills</v-btn>
-          </v-flex>
-          <v-flex>
+          </li>
+          <li>
             <router-link to="/experience">
               <v-btn text class="white--text">Experience</v-btn>
             </router-link>
-       
-          </v-flex>
-          <v-flex>
-            <v-btn text class="white--text">Projects</v-btn>
-          </v-flex>
-          <v-flex>
+          </li>
+          <li>
             <v-btn text class="white--text">Education</v-btn>
-          </v-flex>
-          <v-flex>
-  <router-link to="/contact#contact">
-    <v-btn text class="white--text">Contact</v-btn>
-  </router-link>
-</v-flex>
-          <v-flex>
-            <v-btn outlined rounded color="#854CE6">LinkedIn Profile</v-btn>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>  
+          </li>
+          <li>
+            <router-link to="/contact#contact">
+              <v-btn text class="white--text">Contact</v-btn>
+            </router-link>
+          </li>
+        </ul>
+      </v-col>
+    </v-row>  
   </v-col> 
   
   <HelloImage></HelloImage>
@@ -88,7 +82,7 @@
   </v-col>
  </v-row> -->
        
-       
+       <ToastVue v-if="Toast"></ToastVue>
 
 
       </div>
@@ -104,9 +98,11 @@ import HelloImage from '../components/HelloWorld.vue'
 import SkillsSet from '../components/SkillsSet.vue'
 // import Navigation from '../components/Navigation.vue'
 import NavigationVue from '../components/NavigationVue.vue'
+import ToastVue from '../components/ToastVue.vue'
   export default {
     data () {
       return {
+        Toast:false,
         Drawer: false,
         items: [
           { title: 'About', icon: 'mdi-view-dashboard' },
@@ -128,11 +124,40 @@ import NavigationVue from '../components/NavigationVue.vue'
     components:{
       HelloImage,
       SkillsSet,
-      NavigationVue
+      NavigationVue,
+      ToastVue
       // Navigation
+    },
+    navigateToContact() {
+      this.$router.push({ path: "/", hash: "#contact" }); // Navigates to the contact section
+    },
+    mounted(){
+      setTimeout(
+        this.$toast({
+  component: ToastVue,
+  listeners: {
+    myClick: () => this.$toast.success("Hi have a nice Day!!")
+  }
+}, {
+  position: "bottom-right",
+  timeout: 5000,
+  closeOnClick: true,
+  pauseOnFocusLoss: true,
+  pauseOnHover: true,
+  draggable: true,
+  draggablePercent: 0.6,
+  showCloseButtonOnHover: false,
+  hideProgressBar: true,
+  closeButton: "button",
+  icon: true,
+  rtl: false
+})
+
+     , 3700)
+
+      }
     }
 
-  }
 </script>
 <style scoped>
 .d-xs-none {
@@ -154,4 +179,54 @@ import NavigationVue from '../components/NavigationVue.vue'
   border: 1px solid rgba(242, 243, 244, 0.5);
   border-radius: 12px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  font: bold 1.5rem sans-serif;
+  text-transform: uppercase;
+  color: grey;
+}
+ul li {
+  padding: 0 .5em .25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+ul li:hover {
+  color: #fff;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  background: #a320ce; /* the color */
+  scale: 0 1;
+  transition: .3s, translate 0s .3s;
+  text-decoration: #a320ce;
+}
+ul:hover li:before {
+  scale: 1;
+}
+ul li:hover:before {
+  translate: 0;
+  transition: .3s;
+}
+ul:hover li:has(~ li:hover):before {
+  translate: 100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+ul:hover li:hover ~ li:before {
+  translate: -100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+
+
+
+
+
 </style>

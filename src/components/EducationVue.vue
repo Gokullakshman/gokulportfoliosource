@@ -21,7 +21,7 @@
   rounded
   shaped
   width="35"
-><v-img src="../assets/flattrade.png"></v-img>
+><v-img :src="n.image"></v-img>
                         </v-sheet>
                     </v-col>
                     <v-col md="9" xs="3" class="mt-2 ml-2">
@@ -63,15 +63,15 @@ export default{
         return{
             EducationDetails:[
                 {
-                image:"../assets/flattrade.png",name:"Government Arts College,Kumbakonam",degree:"Bachelor of Computer Applications",
+                image:require('@/assets/college.jpg'),name:"Government Arts College,Kumbakonam",degree:"Bachelor of Computer Applications",
                 year:"Jun2020 - Jun 2023",cgpa:"Grade:7.9%",description:"I completed my undergraduate studies at Government Arts College with a CGPA of 7.1."
             },
             {
-                image:"../assets/flattrade.png",name:"Town Higher Secondary School,Kumbakonam",degree:"HSC(X11)",
+                image:require('@/assets/images.jpg'),name:"Town Higher Secondary School,Kumbakonam",degree:"HSC(X11)",
                 year:"Jun2018 - Mar2020",cgpa:"Grade:65%",description:"I completed my class 12  education at Town Hr.Secondary School,Kumbakonam."
             },
             {
-                image:"../assets/flattrade.png",name:"Vallalar Higher Secondary School,Kumbakonam",degree:"SSLC(X)",
+                image:require('@/assets/vallalr.jpg'),name:"Vallalar Higher Secondary School,Kumbakonam",degree:"SSLC(X)",
                 year:"Jun2017 - Mar2018",cgpa:"Grade:85%",description:"I completed my class 10 education at Vallalar Hr.Secondary School,Kumbakonam."
             }
         

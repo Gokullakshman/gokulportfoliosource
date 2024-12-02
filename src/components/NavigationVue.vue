@@ -52,11 +52,6 @@
     props:{
       Drawer:Boolean
     },
-    watch:{
-      Drawer(newVal){
-        console.log(newVal,"new")
-      }
-    }
  
 
 

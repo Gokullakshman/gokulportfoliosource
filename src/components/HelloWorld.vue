@@ -66,26 +66,31 @@
 
  
 </template>
+
+<script>
+export default{
+  data(){}
+}
+</script>
 <style>
 .typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
- /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden; 
+  white-space: nowrap;
+  margin: 0 auto; 
+  letter-spacing: .15em; 
   animation: 
     typing 2.5s steps(20, end),
     blink-caret .75s step-end infinite;
     color: orange;
 }
 
-/* The typing effect */
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
+
 
 
 </style>
