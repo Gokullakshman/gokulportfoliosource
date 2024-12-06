@@ -28,9 +28,7 @@
         <v-col>
           <v-btn color="#854CE6" small  dense rounded>Github profile</v-btn>
         </v-col>
-        <router-link to="/contact#contact">
     <v-btn text class="white--text">My</v-btn>
-  </router-link>
         
       </v-list>
     </v-navigation-drawer> 

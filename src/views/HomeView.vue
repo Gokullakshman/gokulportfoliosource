@@ -1,77 +1,15 @@
 <template>  
-<div fill-height class="" >
-  <v-row  >
-    <v-col xs12  >
-    <!-- For Mobile: Show only Portfolio -->
-    <v-row class="pa-1 " >
-      <v-col sm="12" class="d-md-none ">
-        <v-row>
-          <v-col cols="1"></v-col>
-          <v-col cols="6" class="mt-4 ">
-            <v-icon large color="orange" >mdi-face-man-profile</v-icon>
-            <span class="orange--text pl-4 font-weight-bold" >Portfolio</span>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col class="d-flex justify-end">
-            <v-app-bar-nav-icon     color="white" large @click.stop="Drawer =!Drawer"></v-app-bar-nav-icon>
-          </v-col>
-        </v-row>
-       
-       
-      
-         
-    
-      </v-col>
-    
-
-      
-    
-    </v-row> 
-
-   
-
-    <!-- For Desktop and Larger: Show Full Menu -->
-    <v-row justify-end align-center v-show="$vuetify.breakpoint.mdAndUp" class=" pa-4 mt-4">
-      <v-col md="3" class="d-flex justify-end align-center">
-        <v-icon large color="orange" >mdi-face-man-profile</v-icon>&nbsp;&nbsp;
-        <span   class="white--text" style=" font: bold 1.5rem sans-serif;">Portfolio</span>
-      </v-col>
-      <v-col md="9">
-        <ul>
-          <li>
-            <v-btn text class="white--text">About</v-btn>
-          </li>
-          <li>
-            <v-btn text class="white--text">Skills</v-btn>
-          </li>
-          <li>
-            <router-link to="/experience">
-              <v-btn text class="white--text">Experience</v-btn>
-            </router-link>
-          </li>
-          <li>
-            <v-btn text class="white--text">Education</v-btn>
-          </li>
-          <li>
-            <router-link to="/contact#contact">
-              <v-btn text class="white--text">Contact</v-btn>
-            </router-link>
-          </li>
-        </ul>
-      </v-col>
-    </v-row>  
-  </v-col> 
-  
-  <HelloImage></HelloImage>
-
-      
-        </v-row>    
+<div fill-height class="" >  
 
 
         
-       
+       <HelloImage></HelloImage>
         <SkillsSet></SkillsSet>
-        <NavigationVue :Drawer="Drawer"></NavigationVue>
+        <ExperienceVue></ExperienceVue>
+        <EducationVue/>
+        <ContactVue></ContactVue>
+        <FooterVue></FooterVue>
+        <!-- <NavigationVue :Drawer="Drawer"></NavigationVue> -->
         
         <!-- <Navigation></Navigation> -->
         <!-- <v-row >
@@ -96,9 +34,13 @@
 // import vuetify from '@/plugins/vuetify';
 import HelloImage from '../components/HelloWorld.vue'
 import SkillsSet from '../components/SkillsSet.vue'
+import EducationVue   from '../components/EducationVue.vue';
+import ContactVue  from '../components/ContactVue.vue';
 // import Navigation from '../components/Navigation.vue'
-import NavigationVue from '../components/NavigationVue.vue'
+
 import ToastVue from '../components/ToastVue.vue'
+import ExperienceVue from '../components/ExperienceVue.vue'
+import FooterVue from '../components/FooterVue.vue'
   export default {
     data () {
       return {
@@ -124,8 +66,11 @@ import ToastVue from '../components/ToastVue.vue'
     components:{
       HelloImage,
       SkillsSet,
-      NavigationVue,
-      ToastVue
+      ToastVue,
+      ExperienceVue,
+      EducationVue,
+      ContactVue,
+      FooterVue
       // Navigation
     },
     navigateToContact() {

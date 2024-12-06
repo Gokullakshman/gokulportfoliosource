@@ -67,13 +67,13 @@
             </v-col>
         </v-row> 
       
-      <FooterVue></FooterVue>
+     
 
     </div>
 </template>
 <script>
 import EventService from '@/services/EventService';
-import FooterVue from './FooterVue.vue'
+
 export default{
     data(){
         return{
@@ -85,9 +85,7 @@ export default{
             }
         }
     },
-    components:{
-      FooterVue
-    },
+
     methods:{
         SendEmailProcess(){
             if(this.mailDetails.youremail=="" || this.mailDetails.subject == "" ){

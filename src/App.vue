@@ -2,23 +2,23 @@
   <v-app style="background: linear-gradient(135deg, #46293d, #161638);">
   
 
-    <v-main>
-      <transition name="fade" mode="out-in">
-      <router-view />
-    </transition>
-    
-    </v-main>
+ 
+    <MainVue />
+
   </v-app>
 </template>
 
 <script>
-
+import MainVue from "./views/MainVue.vue"
 export default {
   name: 'App',
 
   data: () => ({
     //
   }),
+  components: {
+    MainVue
+  }
 };
 </script>
 <style>

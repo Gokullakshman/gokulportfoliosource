@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="experience">
         <v-row >
         <v-col cols="12" xs="12" md="12" class="d-flex justify-center">
             <span class="white--text text-h4 font-weight-bold">Experience</span>
@@ -62,16 +62,14 @@
         </v-col>
     </v-row> 
 
-    <EducationVue/>
-    <ContactVue></ContactVue>
+   
 
     </div>
    
 </template>
 
 <script>
-import EducationVue   from './EducationVue.vue';
-import ContactVue  from './ContactVue.vue';
+
 export default{
     data(){
         return{
@@ -80,10 +78,7 @@ export default{
             expand:false
         }
     },
-    components:{
-        EducationVue,
-        ContactVue
-    }
+ 
 
 }
 </script>

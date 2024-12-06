@@ -140,7 +140,7 @@ class="custom-outline black"
      <span class="white--text">hello</span>
   </v-col>
  </v-row> -->
-<ExperienceVue></ExperienceVue>
+
 
   </div>
    
@@ -148,12 +148,7 @@ class="custom-outline black"
 
 </template>
 <script>
-import ExperienceVue from './ExperienceVue.vue'
-export default{
-  components:{
-    ExperienceVue
-  }
-}
+
 </script>
 
 <style >
