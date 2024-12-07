@@ -1,6 +1,7 @@
 <template>
     <div>
         <v-footer
+        id="footer"
         class="mt-5"
   
     dark
@@ -20,6 +21,7 @@
           :key="icon"
           class="mx-4 white--text"
           icon
+         
         >
           <v-icon size="24px">
             {{ icon }}
@@ -35,6 +37,7 @@
           class="white--text"
           :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp}"
           text
+           @click="setActive(link)"
         >
         {{ link }}
         </v-btn>
@@ -66,10 +69,27 @@
         'Skills',
         'Experience',
         'Contact',
-        'Github Profile',
+        'About',
         'My certifications',
       ],
     }),
+    methods:{
+      setActive(item) {
+      this.activeItem = item;
+
+      // Scroll to the section by its ID
+      const targetSection = document.getElementById(item.toLowerCase());
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start', // You can adjust this based on where you want the section to land
+        });
+      }
+    }
+    }
+    
+    
+    
   }
 </script>
 

@@ -18,17 +18,18 @@
           link
         >
           <v-list-item-icon>
-            <v-icon >{{ val[0] }}</v-icon>
+            <v-icon  >{{ val[0] }}</v-icon>
           </v-list-item-icon>
+          <v-btn text @click="setActive(val[1])">{{ val[1] }}</v-btn>
 
-          <v-list-item-content>
+          <!-- <v-list-item-content>
             <v-list-item-title  >{{ val[1] }}</v-list-item-title>
-          </v-list-item-content>
+          </v-list-item-content> -->
         </v-list-item> 
         <v-col>
           <v-btn color="#854CE6" small  dense rounded>Github profile</v-btn>
         </v-col>
-    <v-btn text class="white--text">My</v-btn>
+
         
       </v-list>
     </v-navigation-drawer> 
@@ -50,6 +51,20 @@
     props:{
       Drawer:Boolean
     },
+    methods: {
+    setActive(item) {
+      this.activeItem = item;
+
+      // Scroll to the section by its ID
+      const targetSection = document.getElementById(item.toLowerCase());
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start', // You can adjust this based on where you want the section to land
+        });
+      }
+    }
+  },
  
 
 

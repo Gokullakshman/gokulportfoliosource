@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="skills">
      <v-row >
   <v-col cols="12" xs="12" md="12" class="d-flex justify-center display-1 font-weight-bold white--text ">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">

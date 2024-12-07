@@ -1,6 +1,6 @@
 <template>
 
-    <v-container fill-height   >
+    <v-container fill-height  id="about" >
 
   
 <v-row class="mt-10 d-flex justify-space-around">
