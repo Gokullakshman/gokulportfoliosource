@@ -64,7 +64,7 @@ export default{
             EducationDetails:[
                 {
                 image:require('@/assets/college.jpg'),name:"Government Arts College,Kumbakonam",degree:"Bachelor of Computer Applications",
-                year:"Jun2020 - Jun 2023",cgpa:"Grade:7.9%",description:"I completed my undergraduate studies at Government Arts College with a CGPA of 7.1."
+                year:"Jun2020 - Jun 2023",cgpa:"Grade:7.9%",description:"I completed my UG studies at Government Arts College with a CGPA of 7.1."
             },
             {
                 image:require('@/assets/images.jpg'),name:"Town Higher Secondary School,Kumbakonam",degree:"HSC(X11)",

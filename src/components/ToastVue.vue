@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-      <span>Say Hi!! to me</span>&nbsp;&nbsp;
+      <span  size="30" class="mdi mdi-emoticon-happy-outline"></span>&nbsp;&nbsp;<span>Say Hi!! to me</span>&nbsp;&nbsp;
+      
+
       <!-- <button
        outlined
         class="action"

@@ -24,7 +24,7 @@
           realm through my creative contributions. 
           
          </p> 
-         <v-btn rounded large color="#854CE6" class="white--text" :block="$vuetify.breakpoint.mobile">View my Resume</v-btn>
+         <v-btn outlined large color="#854CE6" class="" :block="$vuetify.breakpoint.mobile" @click="viewResume">View my Resume</v-btn>
         </v-col>
         
       
@@ -68,6 +68,17 @@
 </template>
 
 <script>
+export default{
+  methods:{
+    viewResume() {
+      // Replace the URL below with the actual path to your resume file
+      const resumeUrl = "../../public/GokulResume.pdf";
+      window.open(resumeUrl, "_blank");
+    }
+
+  }
+  
+}
 
 </script>
 <style>

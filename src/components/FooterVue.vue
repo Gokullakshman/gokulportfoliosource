@@ -35,9 +35,12 @@
           v-for="link in links"
           :key="link"
           class="white--text"
-          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp}"
+          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'purple--text':hoveredlink == link}"
           text
            @click="setActive(link)"
+           @mouseover="SetHoveredLink(link)"
+           @mouseleave="RemoveHoveredLink"
+           
         >
         {{ link }}
         </v-btn>
@@ -70,8 +73,8 @@
         'Experience',
         'Contact',
         'About',
-        'My certifications',
       ],
+      hoveredlink:null
     }),
     methods:{
       setActive(item) {
@@ -85,7 +88,14 @@
           block: 'start', // You can adjust this based on where you want the section to land
         });
       }
+    },
+    SetHoveredLink(val){
+      this.hoveredlink = val
+    },
+    RemoveHoveredLink(){
+        this.hoveredlink = null
     }
+
     }
     
     

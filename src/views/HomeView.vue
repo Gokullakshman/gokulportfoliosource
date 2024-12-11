@@ -85,8 +85,8 @@ import FooterVue from '../components/FooterVue.vue'
   }
 }, {
   position: "bottom-right",
-  timeout: 5000,
-  closeOnClick: true,
+  timeout: 3000,
+  closeOnClick: false,
   pauseOnFocusLoss: true,
   pauseOnHover: true,
   draggable: true,
@@ -94,7 +94,7 @@ import FooterVue from '../components/FooterVue.vue'
   showCloseButtonOnHover: false,
   hideProgressBar: true,
   closeButton: "button",
-  icon: true,
+  icon: false,
   rtl: false
 })
 

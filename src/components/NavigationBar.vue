@@ -1,6 +1,6 @@
 <template>
-  <div fill-height>
-    <v-row>
+  <div fill-height >
+    <v-row  >
       <v-col xs12>
         <!-- For Mobile: Show only Portfolio -->
         <v-row class="pa-1">
@@ -8,8 +8,8 @@
             <v-row>
               <v-col cols="1"></v-col>
               <v-col cols="6" class="mt-4">
-                <v-icon large color="orange">mdi-face-man-profile</v-icon>
-                <span class="orange--text pl-4 font-weight-bold">Portfolio</span>
+                <v-icon large color="purple">mdi-face-man-profile</v-icon>
+                <span class="white--text pl-4 font-weight-bold">Portfolio</span>
               </v-col>
               <v-spacer></v-spacer>
               <v-col class="d-flex justify-end">
