@@ -2,21 +2,22 @@
 
 <template>
     <div id="contact">
+       
         <v-row class="pt-10 ">
             <v-col cols="12" md="12" xs="12" >
-                <span class="white--text d-flex justify-center text-h5 font-weight-bold">Contact US</span>
+                <span class="white--text d-flex justify-center text-h5 font-weight-bold">Contact&nbsp; <span class="green--text"> US</span> </span>
             </v-col>
             <v-col cols="12" md="12" xs="12" >
-                <span class="white--text d-flex justify-center px-6 text-h6 font-weight-light">Feel free to reach out to me for any questions or opportunities!
+                <span class="white--text d-flex justify-center px-6 text-h6 font-weight-light">Feel free to reach out to me for any questions or &nbsp; <span class="green--text">opportunities!</span>
                     </span>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-                <v-card  rounded class="black" style="box-shadow: #854CE4 2px 2px 2px 0px;" :width="$vuetify.breakpoint.mdAndUp ? '550':'390'"  
+                <v-card  rounded  style="box-shadow: #0c1b2b 2px 2px 2px 0px; background-color: #000014;" :width="$vuetify.breakpoint.mdAndUp ? '550':'390'"  
                 :height ="$vuetify.breakpoint.mdAndUp ? '540':'560'" >
 
                 <v-row class="mt-6">
                     <v-col cols="12" md="12" xs="12">
-                        <span class="white--text text-h6 pa-7">Email Me 🚀</span>
+                        <span class="white--text text-h6 pa-7">Email Me 🚀 {{ mailDetails }}</span>
                     </v-col>
                     <v-col cols="12" md="12"  class="d-flex justify-center">
                         <input
@@ -54,7 +55,7 @@
                        <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" v-model="mailDetails.description"></textarea>
                     </v-col>
                     <v-col  xs="10" class="d-flex justify-center px-10">
-                       <v-btn class="black--text font-weight-bold " style="background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);" block height="40" @click="SendEmailProcess()">Send</v-btn>
+                       <v-btn class="white--text font-weight-bold green"  block height="40" @click="SendEmailProcess()">Send</v-btn>
                     </v-col>
                 </v-row>
 
@@ -72,7 +73,8 @@
     </div>
 </template>
 <script>
-import EventService from '@/services/EventService';
+// import EventService from '@/services/EventService';
+import emailjs from "emailjs-com";
 
 export default{
     data(){
@@ -91,40 +93,34 @@ export default{
             if(this.mailDetails.youremail=="" || this.mailDetails.subject == "" ){
                 return
             }else{
-  
-                var input={
-                  yourEmail:this.mailDetails.youremail,
-                  yourName:this.mailDetails.yourname,
-                  subject:this.mailDetails.subject,
-                  description:this.mailDetails.description
-                }
-                console.log("input",input) 
+                const serviceID = "service_i3w46j3"; // Replace with your Email Service ID
+      const templateID = "template_d3u4f5q"; // Replace with your Template ID
+      const userID = "P2Yzwj4FQdA8B7zyi"; // Replace with your User ID
 
-                EventService.sendEmail(input).then(
-                    (response) =>{
-                        this.$toast("Email Sent Successfully!", {
-  position: "bottom-right",
-  timeout: 5000,
-  closeOnClick: true,
-  pauseOnFocusLoss: true,
-  pauseOnHover: true,
-  draggable: true,
-  draggablePercent: 0.6,
-  showCloseButtonOnHover: false,
-  hideProgressBar: false,
-  closeButton: "button",
-  icon: true,
-  rtl: false
-});
-                        console.log("success",response)
-                    }
-                ).catch( (response) => {
-                    console.log("error",response)
-                });
-               
-            }
+      const templateParams = {
+        from_name: this.mailDetails.yourname,
+        from_email: this.mailDetails.youremail,
+        to_name:"gokulkarthi6383@gmail.com",
+        message: this.mailDetails.description
+      };
+
+      emailjs
+        .send(serviceID, templateID, templateParams, userID)
+        .then(
+          (response) => {
+            console.log("Email sent successfully:", response.status, response.text);
+            alert("Email sent!");
+          },
+          (error) => {
+            console.error("Failed to send email:", error);
+            alert("Failed to send email. Please try again.");
+          }
+        );
+  
         }
     }
+}
+    
 }
 
 </script>

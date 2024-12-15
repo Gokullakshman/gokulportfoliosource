@@ -5,11 +5,20 @@
                 <p class="white--text text-h4 d-flex justify-center font-weight-medium">Education</p>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-                <p  style="max-width: 600px;color: rgb(177, 178, 179);" class="text-h6 font-weight-medium  text-center d-flex justify-center"  :class="{'text-h6':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
+                <p  style="max-width: 600px;color: rgb(177, 178, 179);" class="text-h6 font-weight-light  text-center d-flex justify-center"  :class="{'text-h6':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
             </v-col>
+          
 
             <v-col md="12" xs="12" class="d-flex justify-center" v-for="(n,index) in EducationDetails" :key="index">
-                <v-card outlined class="black" style="box-shadow: #854CE6 0px 0px 1px 2px;" :width="$vuetify.breakpoint.mdAndUp ? '600':'320'" :height="$vuetify.breakpoint.mdAndUp ? '170':'220'">
+                
+                <v-card    class="hover-card v-scroll-animation"
+        :class="{ 'active-hover': ActiveIndex === index }"
+        @mouseover="ActiveIndex = index"
+        @mouseleave="ActiveIndex = null"
+        :elevation="0"
+      
+    
+    :width="$vuetify.breakpoint.mdAndUp ? '600':'320'" :height="$vuetify.breakpoint.mdAndUp ? '170':'220'">
                  <v-row class="mt-2" no-gutters>
                     <v-col   md="1" xs="1" class="d-flex mt-8 ml-6 ">
                         <v-sheet
@@ -26,7 +35,7 @@
                     </v-col>
                     <v-col md="9" xs="3" class="mt-2 ml-2">
                         <p  style="  color: rgb(177, 178, 179);
-    font-family: Poppins, sans-serif;" class="font-weight-bold">{{ n.name }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
+    font-family: Poppins, sans-serif;" class="font-weight-bold">{{ n.name }}  {{ Activehover }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
 
                         <!-- <p class="white--text" no-gutters>Bachelor of Computer Applications</p> -->
                     </v-col>
@@ -75,8 +84,32 @@ export default{
                 year:"Jun2017 - Mar2018",cgpa:"Grade:85%",description:"I completed my class 10 education at Vallalar Hr.Secondary School,Kumbakonam."
             }
         
-        ]
+        ],
+        Activehover:false,
+        ActiveIndex: null,
         }
     }
 }
 </script>
+<style scoped>
+.transparent-card {
+  background-color: transparent !important; /* Make the background fully transparent */
+  border: 4px solid #00FF00;
+  border-radius: 4px ;
+ /* Add a green outline similar to the one in your image */
+}
+.hover-card {
+  background-color: transparent  !important;
+  border: 1px solid #444444; /* Default border color */
+  transition: border-color 0.1s ease, background-color 0.3s ease;
+}
+
+.active-hover {
+  border-color: #3fbe3f !important; /* Green border on hover */
+  background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+
+
+</style>

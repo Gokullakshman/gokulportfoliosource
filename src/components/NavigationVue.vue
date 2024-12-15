@@ -27,7 +27,7 @@
           </v-list-item-content> -->
         </v-list-item> 
         <v-col>
-          <v-btn color="#854CE6" small  dense rounded>Github profile</v-btn>
+          <v-btn color="green" small  dense rounded href="https://github.com/Gokullakshman" target="_blank">Github profile</v-btn>
         </v-col>
 
         

@@ -8,8 +8,8 @@
             <v-row>
               <v-col cols="1"></v-col>
               <v-col cols="6" class="mt-4">
-                <v-icon large color="purple">mdi-face-man-profile</v-icon>
-                <span class="white--text pl-4 font-weight-bold">Portfolio</span>
+                <v-icon large color="green">mdi-face-man-profile</v-icon>&nbsp;&nbsp;
+                <span class="green--text" style="font: bold 1.4rem sans-serif;">Port</span><span class="white--text" style="font: bold 1.5rem sans-serif;">folio</span>
               </v-col>
               <v-spacer></v-spacer>
               <v-col class="d-flex justify-end">
@@ -23,9 +23,10 @@
 
         <!-- For Desktop and Larger: Show Full Menu -->
         <v-row justify-end align-center v-show="$vuetify.breakpoint.mdAndUp" class="pa-4 mt-4">
+      
           <v-col md="3" class="d-flex justify-end align-center">
-            <v-icon large color="orange">mdi-face-man-profile</v-icon>&nbsp;&nbsp;
-            <span class="white--text" style="font: bold 1.5rem sans-serif;">Portfolio</span>
+            <v-icon large color="green">mdi-face-man-profile</v-icon>&nbsp;&nbsp;
+            <span class="green--text" style="font: bold 1.5rem sans-serif;">Port</span><span class="white--text" style="font: bold 1.5rem sans-serif;">folio</span>
           </v-col>
           <v-col md="9">
             <ul>
@@ -123,10 +124,12 @@ ul li:before {
   content: "";
   position: absolute;
   inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
-  background: #a320ce; /* the color */
+   text-decoration: green;
+   background-color: green; /* the color */
+ 
   scale: 0 1;
   transition: 0.3s, translate 0s 0.3s;
-  text-decoration: #a320ce;
+ 
 }
 
 ul:hover li:before {

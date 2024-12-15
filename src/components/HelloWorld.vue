@@ -12,8 +12,8 @@
     v-show="$vuetify.breakpoint.mdAndUp"
   >   
         <v-col column cols="12">
-          <p style=" color: rgb(177, 178, 179);" class=""> 
-          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter">Hi,I am Gokul S</span>
+          <p style=" color: rgb(203, 213, 225);" class="font-weight-light"> 
+          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter white--text">Hi,&nbsp;I am &nbsp; <a class="font-weight-bold display-1 green--text">Gokul S</a></span>
           
           As a full-stack web developer
           with a passion for blockchain and finance, I leverage my diverse
@@ -24,7 +24,7 @@
           realm through my creative contributions. 
           
          </p> 
-         <v-btn outlined large color="#854CE6" class="" :block="$vuetify.breakpoint.mobile" @click="viewResume">View my Resume</v-btn>
+         <v-btn    large color="green" class="white--text" :block="$vuetify.breakpoint.mobile"  @click="viewResume">View my Resume</v-btn>
         </v-col>
         
       
@@ -46,6 +46,7 @@
 
   <v-col cols="12" xs="12" md="6" :class="{
       'd-flex justify-center ': $vuetify.breakpoint.xsOnly,
+      
       'd-flex justify-end ': !$vuetify.breakpoint.xsOnly,
       'order-1':$vuetify.breakpoint.mdAndUp,'order-0':$vuetify.breakpoint.mobile
     }">
@@ -59,6 +60,7 @@
 
 
 </v-row>   
+
 
 
 
@@ -90,7 +92,7 @@ export default{
   animation: 
     typing 2.5s steps(20, end),
     blink-caret .75s step-end infinite;
-    color: orange;
+   
 }
 
 

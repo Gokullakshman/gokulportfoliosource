@@ -5,14 +5,14 @@
             <span class="white--text text-h4 font-weight-bold">Experience</span>
         </v-col>
         <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-            <p  class="text-center text-h6 font-weight-medium"    :class="{'text-h6':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;color: rgb(177, 178, 179);">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
+            <p  class="text-center text-h6 font-weight-light"    :class="{'text-h6':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;color: rgb(177, 178, 179);">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
         </v-col>
         
     </v-row> 
 
     <v-row >
         <v-col class="d-flex justify-center mb-6">
-            <v-card outlined  @mouseover="expand=true" @mouseleave="expand=false" class="black" style="box-shadow: #854CE6 0px 0px 1px 2px;" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
+            <v-sheet border style="background-color: #000014;" @mouseover="expand=true" @mouseleave="expand=false" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
                 <v-row >
                     <v-col  cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                         <v-sheet
@@ -25,8 +25,7 @@
   shaped
   width="35"
 ><v-img src="../assets/flattrade.png"></v-img></v-sheet>
-<span class=" pl-4 font-weight-bold mt-4" style="  color: rgb(177, 178, 179);
-    font-family: Poppins, sans-serif;">Software Engineer <br>  <span class="white--text caption">Flattrade</span>
+<span class=" pl-4 font-weight-bold mt-4 white--text">Software Engineer <br>  <span class="white--text caption">Flattrade</span>
     <br><span class="caption">March 2024 -Till</span></span>
    
 <!-- <span class="white--text">hellllllllllllllll</span> -->
@@ -58,7 +57,7 @@
 
 
 
-            </v-card>
+            </v-sheet>
         </v-col>
     </v-row> 
 

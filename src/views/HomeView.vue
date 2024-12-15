@@ -2,7 +2,7 @@
 <div fill-height class="" >  
 
 
-        
+        {{ $vuetify.breakpoint.width }}
        <HelloImage></HelloImage>
         <SkillsSet></SkillsSet>
         <ExperienceVue></ExperienceVue>

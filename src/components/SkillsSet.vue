@@ -3,7 +3,7 @@
      <v-row >
   <v-col cols="12" xs="12" md="12" class="d-flex justify-center display-1 font-weight-bold white--text ">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">
-    <p style=" color: rgb(177, 178, 179);" :class="{'d-flex justify-center font-weight-medium text-h6':$vuetify.breakpoint.mdAndUp ,'text-h6 font-weight-medium':$vuetify.breakpoint.mobile}">
+    <p style=" color: rgb(203, 213, 225);"  :class="{'d-flex justify-center font-weight-light text-h6':$vuetify.breakpoint.mdAndUp ,'text-h6 font-weight-medium':$vuetify.breakpoint.mobile}">
       Here are some of my skills,which i have been working on web
       <template v-if="$vuetify.breakpoint.mdAndUp">
         <br>
@@ -19,11 +19,13 @@ outlined
 
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
-class="custom-outline black"
- style="box-shadow: #854CE6 0px 0px 1px 2px;"
+ class="hover-card"
+        :class="{ 'active-hover': ActiveIndex === 1 }"
+        @mouseover="ActiveIndex=1"
+
 >
 <v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading ">Frontend</span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading ">Front<strong>end</strong></span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 green" label> <v-icon large color="green">mdi-vuejs</v-icon><span class="white--text caption">VueJs</span></v-chip>
 </v-col>
@@ -59,8 +61,7 @@ class="custom-outline black"
 outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
-class="custom-outline black"
- style="box-shadow: #854CE6 0px 0px 1px 2px;"
+style="background-color: #000014;"
 
 ><v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading">Backend</span> </v-col>
@@ -91,8 +92,7 @@ class="custom-outline black"
 outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
-class="custom-outline black"
- style="box-shadow: #854CE6 0px 0px 1px 2px;"
+style="background-color: #000014;"
 
 ><v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading">Other Tools</span> </v-col>
@@ -120,19 +120,6 @@ class="custom-outline black"
 </v-card>
   </v-col>
  </v-row> 
-
-
-
- 
-
-    
-
-  
-
- 
-
-
-
 </v-row> 
 
 <!-- <v-row class="black">
@@ -148,15 +135,24 @@ class="custom-outline black"
 
 </template>
 <script>
+ export default{
+    data(){
+      return{
+        ActiveIndex:0
+      }
+    }
+  }
 
 </script>
 
-<style >
+
+
+<style scoped>
 
  .Heading{
   font-size: 28px;
     font-weight: 600;
-    color: rgb(177, 178, 179);
+    color: rgb(71, 223, 170);
     font-family: Poppins, sans-serif;
  }
  .headingH6{
@@ -165,4 +161,5 @@ class="custom-outline black"
     color: rgb(177, 178, 179);
     font-family: Poppins, sans-serif;
  }
+ 
 </style>

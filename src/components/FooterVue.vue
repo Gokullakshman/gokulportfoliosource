@@ -6,9 +6,10 @@
   
     dark
     padless
+    style="width: 100%;"
   >
     <v-card
-      style="background: linear-gradient(135deg, #46293d, #161638);"
+    style="background: linear-gradient(135deg, #000000 0%, #0c1b2a 25%, #0c1b2a 50%,  #000000  100%);"
       outlined
       flat
       tile
@@ -17,14 +18,17 @@
     >
       <v-card-text>
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
+          v-for="n in socialmedia"
+          :key="n.icon"
+          :href="n.link"
+          class="mx-4 "
           icon
+          :color="n.color"
+          target="_blank"
          
         >
-          <v-icon size="24px">
-            {{ icon }}
+          <v-icon size="24px" >
+            {{ n.icon }}
           </v-icon>
         </v-btn>
       </v-card-text>
@@ -35,7 +39,7 @@
           v-for="link in links"
           :key="link"
           class="white--text"
-          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'purple--text':hoveredlink == link}"
+          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'green--text':hoveredlink == link}"
           text
            @click="setActive(link)"
            @mouseover="SetHoveredLink(link)"
@@ -52,7 +56,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>All rights Reserved</strong>
+        <v-icon color="green">mdi-whatsapp</v-icon>&nbsp; <strong>+91 6383163259</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -61,18 +65,37 @@
 <script>
   export default {
     data: () => ({
-      icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram',
+      socialmedia: [{
+        icon:'mdi-instagram',
+        link:"https://github.com/Gokullakshman",
+        color:"pink"
+      },
+      {
+        icon:'mdi-twitter',
+        link:"https://github.com/Gokullakshman",
+        color:"blue"
+      },
+      {
+        icon:'mdi-linkedin',
+        link:"https://www.linkedin.com/in/gokul-s-38893b280/",
+        color:"info"
+      },
+      {
+        icon:'mdi-github',
+        link:"https://github.com/Gokullakshman",
+        color:"white"
+      }
+       
+        
+        
+        
       ],
       links: [
-        'Home',
+        'About',
         'Skills',
         'Experience',
         'Contact',
-        'About',
+        
       ],
       hoveredlink:null
     }),
