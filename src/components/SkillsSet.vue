@@ -21,7 +21,7 @@ outlined
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
  class="hover-card"
         :class="{ 'active-hover': ActiveIndex === 1 }"
-        @mouseover="ActiveIndex=1"
+        @mouseover="ActiveIndex=1"  @mouseleave="ActiveIndex=0"
 
 >
 <v-row >
@@ -61,10 +61,13 @@ outlined
 outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
-style="background-color: #000014;"
+class="hover-card"
+        :class="{ 'active-hover': ActiveIndex === 2 }"
+        @mouseover="ActiveIndex=2"  @mouseleave="ActiveIndex=0"
 
 ><v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading">Backend</span> </v-col>
+  {{ ActiveIndex }}
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-0"><span class="Heading">Backend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 blue" label> <v-img src="../assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="white--text caption">Java</span></v-chip>
 </v-col>
@@ -92,7 +95,9 @@ style="background-color: #000014;"
 outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
-style="background-color: #000014;"
+class="hover-card"
+        :class="{ 'active-hover': ActiveIndex === 3 }"
+        @mouseover="ActiveIndex=3"  @mouseleave="ActiveIndex=0"
 
 ><v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading">Other Tools</span> </v-col>
@@ -161,5 +166,18 @@ style="background-color: #000014;"
     color: rgb(177, 178, 179);
     font-family: Poppins, sans-serif;
  }
+
  
+
+.hover-card {
+  background-color: transparent  !important;
+  border: 2px solid #444444; /* Default border color */
+  transition: border-color 0.1s ease, background-color 0.3s ease;
+}
+
+.active-hover {
+  border-color: #3fbe3f !important; /* Green border on hover */
+  background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
 </style>

@@ -4,9 +4,7 @@ import router from './router'
 import vuetify from './plugins/vuetify' 
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
-import scrollTransition from './scrolltransistion';
 
-Vue.directive('scrollTransition', scrollTransition);
 
 Vue.use(Toast, {
   transition: "Vue-Toastification__bounce",

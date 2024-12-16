@@ -12,7 +12,7 @@
 
     <v-row >
         <v-col class="d-flex justify-center mb-6">
-            <v-sheet border style="background-color: #000014;" @mouseover="expand=true" @mouseleave="expand=false" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
+            <v-sheet border class="hover-card" :class="{'active-hover':expand}"  @mouseover="expand=true" @mouseleave="expand=false" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
                 <v-row >
                     <v-col  cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                         <v-sheet
@@ -81,3 +81,16 @@ export default{
 
 }
 </script>
+<style scoped>
+.hover-card {
+  background-color: transparent  !important;
+  border: 2px solid #444444; /* Default border color */
+  transition: border-color 0.1s ease, background-color 0.3s ease;
+}
+
+.active-hover {
+  border-color: #3fbe3f !important; /* Green border on hover */
+  background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+</style>

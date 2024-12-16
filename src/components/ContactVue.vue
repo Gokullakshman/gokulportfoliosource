@@ -17,7 +17,7 @@
 
                 <v-row class="mt-6">
                     <v-col cols="12" md="12" xs="12">
-                        <span class="white--text text-h6 pa-7">Email Me 🚀 {{ mailDetails }}</span>
+                        <span class="white--text text-h6 pa-7">Email Me 🚀</span>
                     </v-col>
                     <v-col cols="12" md="12"  class="d-flex justify-center">
                         <input

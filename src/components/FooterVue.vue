@@ -72,7 +72,7 @@
       },
       {
         icon:'mdi-twitter',
-        link:"https://github.com/Gokullakshman",
+        link:"https://x.com/ThalaphathyMax",
         color:"blue"
       },
       {

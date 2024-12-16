@@ -35,7 +35,7 @@
                     </v-col>
                     <v-col md="9" xs="3" class="mt-2 ml-2">
                         <p  style="  color: rgb(177, 178, 179);
-    font-family: Poppins, sans-serif;" class="font-weight-bold">{{ n.name }}  {{ Activehover }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
+    font-family: Poppins, sans-serif;" class="font-weight-bold">{{ n.name }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
 
                         <!-- <p class="white--text" no-gutters>Bachelor of Computer Applications</p> -->
                     </v-col>
@@ -100,7 +100,7 @@ export default{
 }
 .hover-card {
   background-color: transparent  !important;
-  border: 1px solid #444444; /* Default border color */
+  border: 2px solid #444444; /* Default border color */
   transition: border-color 0.1s ease, background-color 0.3s ease;
 }
 

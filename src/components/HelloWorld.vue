@@ -24,7 +24,7 @@
           realm through my creative contributions. 
           
          </p> 
-         <v-btn    large color="green" class="white--text" :block="$vuetify.breakpoint.mobile"  @click="viewResume">View my Resume</v-btn>
+         <v-btn    large color="green" class="white--text" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       
@@ -74,7 +74,7 @@ export default{
   methods:{
     viewResume() {
       // Replace the URL below with the actual path to your resume file
-      const resumeUrl = "../../public/GokulResume.pdf";
+      const resumeUrl = "../assets/GokulResume.pdf";
       window.open(resumeUrl, "_blank");
     }
 
