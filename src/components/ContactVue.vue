@@ -5,19 +5,19 @@
        
         <v-row class="pt-10 ">
             <v-col cols="12" md="12" xs="12" >
-                <span class="white--text d-flex justify-center text-h5 font-weight-bold">Contact&nbsp; <span class="green--text"> US</span> </span>
+                <span class="black--text d-flex justify-center text-h4 font-weight-medium">Get in touch</span>
             </v-col>
             <v-col cols="12" md="12" xs="12" >
-                <span class="white--text d-flex justify-center px-6 text-h6 font-weight-light">Feel free to reach out to me for any questions or &nbsp; <span class="green--text">opportunities!</span>
+                <span class="black--text d-flex justify-center px-6  text-paragraph">Feel free to reach out to me for any questions or &nbsp; <span class="black--text">opportunities!</span>
                     </span>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-                <v-card  rounded  style="box-shadow: #0c1b2b 2px 2px 2px 0px; background-color: #000014;" :width="$vuetify.breakpoint.mdAndUp ? '550':'390'"  
+                <v-card  rounded outlined   :width="$vuetify.breakpoint.mdAndUp ? '550':'390'"  
                 :height ="$vuetify.breakpoint.mdAndUp ? '540':'560'" >
 
                 <v-row class="mt-6">
                     <v-col cols="12" md="12" xs="12">
-                        <span class="white--text text-h6 pa-7">Email Me 🚀</span>
+                        <span class="black--text text-h6 pa-7">Email Me 🚀</span>
                     </v-col>
                     <v-col cols="12" md="12"  class="d-flex justify-center">
                         <input
@@ -55,7 +55,7 @@
                        <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" v-model="mailDetails.description"></textarea>
                     </v-col>
                     <v-col  xs="10" class="d-flex justify-center px-10">
-                       <v-btn class="white--text font-weight-bold green"  block height="40" @click="SendEmailProcess()">Send</v-btn>
+                       <v-btn class="white--text font-weight-bold black"  block height="40" @click="SendEmailProcess()">Send</v-btn>
                     </v-col>
                 </v-row>
 
@@ -138,7 +138,7 @@ export default{
     border: 1px solid rgb(177, 178, 179);
     outline: none;
     font-size: 18px;
-    color: rgb(242, 243, 244);
+    color: rgb(0, 0, 0);
     border-radius: 12px;
     width:490px;
     height: 50px;
@@ -158,6 +158,24 @@ export default{
     width:40px;
     height: 50px;
 }
+::placeholder{
 
+padding: 10px;
+font-weight: 300;
+    line-height: 150%;
+    letter-spacing: -.009375rem;
+    --tw-text-opacity: 4;
+    color: rgb(77 77 77 / var(--tw-text-opacity));
+
+
+}
+
+::-webkit-input-placeholder { /* Edge */
+padding: 10px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+padding: 10px;
+}
 
 </style>

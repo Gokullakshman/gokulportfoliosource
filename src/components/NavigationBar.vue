@@ -22,16 +22,16 @@
         <NavigationVue :Drawer="Drawer" />
 
         <!-- For Desktop and Larger: Show Full Menu -->
-        <v-row justify-end align-center v-show="$vuetify.breakpoint.mdAndUp" class="pa-4 mt-4">
+        <v-row justify-end align-center v-show="$vuetify.breakpoint.mdAndUp" class=" white">
       
           <v-col md="3" class="d-flex justify-end align-center">
-            <v-icon large color="green">mdi-face-man-profile</v-icon>&nbsp;&nbsp;
-            <span class="green--text" style="font: bold 1.5rem sans-serif;">Port</span><span class="white--text" style="font: bold 1.5rem sans-serif;">folio</span>
+            <v-icon large color="black">mdi-face-man-profile</v-icon>&nbsp;&nbsp;
+            <span class="black--text" style="font: bold 1.5rem sans-serif;">Port</span><span class="black--text" style="font: bold 1.5rem sans-serif;">folio</span>
           </v-col>
           <v-col md="9">
             <ul>
               <li v-for="(n, index) in navBarItem" :key="index">
-                <v-btn text class="white--text" @click="setActive(n)">{{ n }}</v-btn>
+                <v-btn text  class=" black--text text-capitalize active-hover"       @click="setActive(n)">{{ n }}</v-btn>
               </li>
             </ul>
           </v-col>
@@ -120,12 +120,12 @@ ul li:hover {
   color: #fff;
 }
 
-ul li:before {
+/* ul li:before {
   content: "";
   position: absolute;
-  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  inset: calc(100% - 3px) 0 0 0; 
    text-decoration: green;
-   background-color: green; /* the color */
+   background-color: green;
  
   scale: 0 1;
   transition: 0.3s, translate 0s 0.3s;
@@ -149,5 +149,5 @@ ul:hover li:has(~ li:hover):before {
 ul:hover li:hover ~ li:before {
   translate: -100% 0;
   transition: 0.2s 0.2s, scale 0s 0.4s;
-}
+} */
 </style>

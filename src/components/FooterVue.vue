@@ -9,7 +9,7 @@
     style="width: 100%;"
   >
     <v-card
-    style="background: linear-gradient(135deg, #000000 0%, #0c1b2a 25%, #0c1b2a 50%,  #000000  100%);"
+    style="background-color: rgba(242, 243, 247, 0.8);"
       outlined
       flat
       tile
@@ -18,12 +18,13 @@
     >
       <v-card-text>
         <v-btn
-          v-for="n in socialmedia"
+          v-for="(n,index) in socialmedia"
           :key="n.icon"
           :href="n.link"
           class="mx-4 "
           icon
-          :color="n.color"
+          :color="currentcolor"
+          @mouseover="getcolor(index)"
           target="_blank"
          
         >
@@ -38,8 +39,8 @@
             <v-btn
           v-for="link in links"
           :key="link"
-          class="white--text"
-          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'green--text':hoveredlink == link}"
+          class="white--text text-capitalize"
+          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'black--text':hoveredlink == link}"
           text
            @click="setActive(link)"
            @mouseover="SetHoveredLink(link)"
@@ -56,7 +57,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        <v-icon color="green">mdi-whatsapp</v-icon>&nbsp; <strong>+91 6383163259</strong>
+        <v-icon color="green">mdi-whatsapp</v-icon>&nbsp; <strong  class="black--text">+91 6383163259</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -97,7 +98,8 @@
         'Contact',
         
       ],
-      hoveredlink:null
+      hoveredlink:null,
+      currentcolor:""
     }),
     methods:{
       setActive(item) {
@@ -117,6 +119,9 @@
     },
     RemoveHoveredLink(){
         this.hoveredlink = null
+    },
+    getcolor(index){
+     this.currentcolor= this.socialmedia[index].color
     }
 
     }

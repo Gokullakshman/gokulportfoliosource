@@ -2,16 +2,16 @@
     <div id="education">
         <v-row >
             <v-col cols="12" md="12" xs="12">
-                <p class="white--text text-h4 d-flex justify-center font-weight-medium">Education</p>
+                <p class="black--text text-h4 d-flex justify-center font-weight-medium">Education</p>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-                <p  style="max-width: 600px;color: rgb(177, 178, 179);" class="text-h6 font-weight-light  text-center d-flex justify-center"  :class="{'text-h6':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
+                <p  style="max-width: 600px;" class="text-paragraph  text-center d-flex justify-center"  :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
             </v-col>
           
 
             <v-col md="12" xs="12" class="d-flex justify-center" v-for="(n,index) in EducationDetails" :key="index">
                 
-                <v-card    class="hover-card v-scroll-animation"
+                <v-card  rounded outlined   style="background-color: rgba(242, 243, 247, 1);"  class=" v-scroll-animation"
         :class="{ 'active-hover': ActiveIndex === index }"
         @mouseover="ActiveIndex = index"
         @mouseleave="ActiveIndex = null"
@@ -34,15 +34,15 @@
                         </v-sheet>
                     </v-col>
                     <v-col md="9" xs="3" class="mt-2 ml-2">
-                        <p  style="  color: rgb(177, 178, 179);
-    font-family: Poppins, sans-serif;" class="font-weight-bold">{{ n.name }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
+                        <p  style="  
+    font-family: Poppins, sans-serif;" class="font-weight-bold text-paragraph">{{ n.name }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
 
-                        <!-- <p class="white--text" no-gutters>Bachelor of Computer Applications</p> -->
+                        <!-- <p class="black--text" no-gutters>Bachelor of Computer Applications</p> -->
                     </v-col>
                     <v-col md="2">
 
                     </v-col>
-                    <span  class="white--text d-flex justify-start d-block mb-6 pl-2" :class="{'caption':$vuetify.breakpoint.mobile}">{{ n.cgpa }}<br>{{ n.description }}</span>
+                    <span  class="black--text text-subtitle-3 d-flex justify-start d-block mb-6 pl-2" :class="{'caption':$vuetify.breakpoint.mobile}">{{ n.cgpa }}<br>{{ n.description }}</span>
                     <!-- <span  class="white--text d-flex justify-start d-block">Welcome</span> -->
                  </v-row>
                  <v-row>
@@ -94,7 +94,7 @@ export default{
 <style scoped>
 .transparent-card {
   background-color: transparent !important; /* Make the background fully transparent */
-  border: 4px solid #00FF00;
+  border: 4px solid #000000;
   border-radius: 4px ;
  /* Add a green outline similar to the one in your image */
 }
@@ -105,7 +105,7 @@ export default{
 }
 
 .active-hover {
-  border-color: #3fbe3f !important; /* Green border on hover */
+  border-color: #000000 !important; /* Green border on hover */
   background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
   transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }

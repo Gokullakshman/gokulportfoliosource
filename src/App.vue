@@ -1,6 +1,6 @@
 <template>
-  <v-app style="background: linear-gradient(610deg, #000000 0%, #0c1b2b 25%, #0c1b2a 30%,#0c1b2b 60%, #0c1b2b 70%,#0c1b2a 100%);
-">
+  <v-app 
+>
 
  
     <MainVue />

@@ -1,9 +1,9 @@
 <template>
-
-    <v-container fill-height  id="about" >
+  <div style="background-color: rgba(242, 243, 247, 1);" class="pt-4 pb-4">
+    <v-container fill-height  id="about"  >
 
   
-<v-row class="mt-10 d-flex justify-space-around">
+<v-row class="mt-2 d-flex justify-space-around">
   <v-col
     md="6"
     xs="12"
@@ -12,8 +12,8 @@
     v-show="$vuetify.breakpoint.mdAndUp"
   >   
         <v-col column cols="12">
-          <p style=" color: rgb(203, 213, 225);" class="font-weight-light"> 
-          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter white--text">Hi,&nbsp;I am &nbsp; <a class="font-weight-bold display-1 green--text">Gokul S</a></span>
+          <p  class=" text-paragraph"> 
+          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter black--text">Hi,&nbsp;I am &nbsp; <a class="font-weight-bold display-1 black--text">Gokul S</a></span>
           
           As a full-stack web developer
           with a passion for blockchain and finance, I leverage my diverse
@@ -24,7 +24,7 @@
           realm through my creative contributions. 
           
          </p> 
-         <v-btn    large color="green" class="white--text" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
+         <v-btn    large color="black" class="white--text" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       
@@ -66,6 +66,9 @@
 
 </v-container>
 
+
+  </div>
+ 
  
 </template>
 
@@ -101,6 +104,13 @@ export default{
   to { width: 100% }
 }
 
+.text-paragraph {
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -.009375rem;
+    --tw-text-opacity: 1;
+    color: rgb(77 77 77 / var(--tw-text-opacity));
+}
 
 
 

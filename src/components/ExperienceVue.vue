@@ -2,17 +2,17 @@
     <div id="experience">
         <v-row >
         <v-col cols="12" xs="12" md="12" class="d-flex justify-center">
-            <span class="white--text text-h4 font-weight-bold">Experience</span>
+            <span class="black--text text-h4 font-weight-bold">Experience</span>
         </v-col>
         <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-            <p  class="text-center text-h6 font-weight-light"    :class="{'text-h6':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;color: rgb(177, 178, 179);">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
+            <p  class="text-center text-paragraph"    :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
         </v-col>
         
     </v-row> 
 
     <v-row >
         <v-col class="d-flex justify-center mb-6">
-            <v-sheet border class="hover-card" :class="{'active-hover':expand}"  @mouseover="expand=true" @mouseleave="expand=false" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
+            <v-card  rounded outlined   style="background-color: rgba(242, 243, 247, 1);" class="rounded-lg" :class="{'active-hover':expand}"  @mouseover="expand=true" @mouseleave="expand=false" :width="$vuetify.breakpoint.mdAndUp ? '600':'350'"   :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440':'720') : ($vuetify.breakpoint.mdAndUp ? '260':'420')">
                 <v-row >
                     <v-col  cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                         <v-sheet
@@ -25,22 +25,22 @@
   shaped
   width="35"
 ><v-img src="../assets/flattrade.png"></v-img></v-sheet>
-<span class=" pl-4 font-weight-bold mt-4 white--text">Software Engineer <br>  <span class="white--text caption">Flattrade</span>
+<span class=" pl-4 font-weight-bold mt-4 black--text">Software Engineer <br>  <span class="black--text caption">Flattrade</span>
     <br><span class="caption">March 2024 -Till</span></span>
    
-<!-- <span class="white--text">hellllllllllllllll</span> -->
+<!-- <span class="black--text">hellllllllllllllll</span> -->
 
                     </v-col>
                 </v-row>
 
                 <v-row class="mb-4" no-gutters>
                     <v-col cols="12" xs="12" md="12" class="pl-4">
-                        <p class="pa-1"  style="  color: rgb(177, 178, 179);
-    font-family: Poppins, sans-serif;">{{ expand ?  fulltext :truncatetext }}<span v-if="$vuetify.breakpoint.mobile && !expand" @click="expand=true" class="caption ml-3 info--text">seemore...</span> <span v-if="$vuetify.breakpoint.mobile && expand" @click="expand=false" class="caption ml-3 info--text">seeless...</span></p>
+                        <p class="pa-1 text-paragraph  text-subtitle-4"  
+   >{{ expand ?  fulltext :truncatetext }}<span v-if="$vuetify.breakpoint.mobile && !expand" @click="expand=true" class="caption ml-3 info--text">seemore...</span> <span v-if="$vuetify.breakpoint.mobile && expand" @click="expand=false" class="caption ml-3 info--text">seeless...</span></p>
                       
                     </v-col> 
                     <v-col cols="12" md="12" xs="12" class="pl-4">
-                        <span  class="caption font-weight-bold" style="  color: rgb(177, 178, 179);
+                        <span  class="text-paragraph font-weight-bold" style="  
     font-family: Poppins, sans-serif;">Skills:
 • Vuejs
 • Vuetify
@@ -57,7 +57,7 @@
 
 
 
-            </v-sheet>
+            </v-card>
         </v-col>
     </v-row> 
 
@@ -89,7 +89,7 @@ export default{
 }
 
 .active-hover {
-  border-color: #3fbe3f !important; /* Green border on hover */
+  border-color: #000000 !important; /* Green border on hover */
   background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
   transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }

@@ -3,7 +3,7 @@
 
 
       
-       <HelloImage></HelloImage>
+       <HelloImage ></HelloImage>
         <SkillsSet></SkillsSet>
         <ExperienceVue></ExperienceVue>
         <EducationVue/>
