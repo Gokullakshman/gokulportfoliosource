@@ -31,7 +31,7 @@
           <v-col md="9">
             <ul>
               <li v-for="(n, index) in navBarItem" :key="index">
-                <v-btn text  class=" black--text text-capitalize active-hover"       @click="setActive(n)">{{ n }}</v-btn>
+                <v-btn text   :class="{'black white--text rounded-lg':blackcolorindex == index}"  @mouseover="mapBlackColor(index)" @mouseleave="blackcolorindex=null"  class=" black--text text-capitalize active-hover"       @click="setActive(n)">{{ n }}</v-btn>
               </li>
             </ul>
           </v-col>
@@ -51,6 +51,7 @@ export default {
       Drawer: false,
       navBarItem: ["About", "Skills", "Experience", "Education", "Contact"],
       activeItem: "About",
+      blackcolorindex:null
     };
   },
   components: {
@@ -69,6 +70,9 @@ export default {
           block: 'start', // You can adjust this based on where you want the section to land
         });
       }
+    },
+    mapBlackColor(index){
+      this.blackcolorindex = index
     }
   },
  

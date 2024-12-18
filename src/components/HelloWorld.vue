@@ -11,7 +11,7 @@
       'd-flex justify-end pl-10  text-center text-h6 pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
     v-show="$vuetify.breakpoint.mdAndUp"
   >   
-        <v-col column cols="12">
+        <v-col column cols="12" class="mt-7">
           <p  class=" text-paragraph"> 
           <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter black--text">Hi,&nbsp;I am &nbsp; <a class="font-weight-bold display-1 black--text">Gokul S</a></span>
           
@@ -24,7 +24,7 @@
           realm through my creative contributions. 
           
          </p> 
-         <v-btn    large color="black" class="white--text" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
+         <v-btn   outlined large color="black" class="black--text" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       
@@ -51,10 +51,10 @@
       'order-1':$vuetify.breakpoint.mdAndUp,'order-0':$vuetify.breakpoint.mobile
     }">
     <v-img
-      lazy-src="https://sirancheevi.com/static/media/portfolio.9ab12bcb3d562306dd3e.png"
-      :height="$vuetify.breakpoint.mobile ? '283' :'403'"
+      lazy-src="../assets/developer.png"
+      :height="$vuetify.breakpoint.mobile ? '283' :'433'"
       max-width="362"
-      src="https://sirancheevi.com/static/media/portfolio.9ab12bcb3d562306dd3e.png"
+      src="../assets/developer.png"
     ></v-img>
   </v-col>   
 

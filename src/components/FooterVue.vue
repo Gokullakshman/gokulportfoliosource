@@ -9,11 +9,10 @@
     style="width: 100%;"
   >
     <v-card
-    style="background-color: rgba(242, 243, 247, 0.8);"
+    
       outlined
-      flat
-      tile
-      class=" white--text text-center"
+     
+      class=" white--text text-center black"
       width="1900"
     >
       <v-card-text>

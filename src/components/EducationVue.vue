@@ -2,7 +2,7 @@
     <div id="education">
         <v-row >
             <v-col cols="12" md="12" xs="12">
-                <p class="black--text text-h4 d-flex justify-center font-weight-medium">Education</p>
+                <p class="black--text text-h4 d-flex justify-center font-weight-light">Education</p>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
                 <p  style="max-width: 600px;" class="text-paragraph  text-center d-flex justify-center"  :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
@@ -42,7 +42,7 @@
                     <v-col md="2">
 
                     </v-col>
-                    <span  class="black--text text-subtitle-3 d-flex justify-start d-block mb-6 pl-2" :class="{'caption':$vuetify.breakpoint.mobile}">{{ n.cgpa }}<br>{{ n.description }}</span>
+                    <span  class="design d-flex justify-start d-block mb-6 pl-2" :class="{'caption':$vuetify.breakpoint.mobile}">{{ n.cgpa }}<br>{{ n.description }}</span>
                     <!-- <span  class="white--text d-flex justify-start d-block">Welcome</span> -->
                  </v-row>
                  <v-row>
@@ -109,7 +109,17 @@ export default{
   background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
   transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
+/* .customeducationtext{
+    color: rgba(2, 3, 34, .6);
+    font-family: wfont_1f4e5a_a4dab464d39a4954a3f7d14cdb48d3ed, wf_a4dab464d39a4954a3f7d14cd, orig_wix_madefor_display_regular;
+    font-size: max(0.5px, 0.0416667*(var(--scaling-factor) - var(--scrollbar-width)));
+    text-decoration: none;
 
-
+} this is okay now for comment for other sedigns      */ 
+.design{
+    color: #707177;
+    font-size: 16px;
+    font-weight: 170;
+}
 
 </style>

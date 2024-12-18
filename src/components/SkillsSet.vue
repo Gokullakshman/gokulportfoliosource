@@ -1,7 +1,7 @@
 <template>
   <div id="skills" class="mt-3">
      <v-row >
-  <v-col cols="12" xs="12" md="12" class="d-flex justify-center display-1 font-weight-bold black--text ">Skills</v-col>
+  <v-col cols="12" xs="12" md="12" class="d-flex justify-center display-1 font-weight-light black--text ">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">
     <p   :class="{'d-flex justify-center text-paragraph ':$vuetify.breakpoint.mdAndUp ,'text-h6 font-weight-medium':$vuetify.breakpoint.mobile}">
       Here are some of my skills,which i have been working on web
