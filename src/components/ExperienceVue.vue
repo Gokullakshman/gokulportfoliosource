@@ -1,5 +1,5 @@
 <template>
-    <div id="experience">
+    <div id="experience" data-aos="zoom-in-up">
         <v-row >
         <v-col cols="12" xs="12" md="12" class="d-flex justify-center">
             <span class="black--text text-h4 font-weight-light">Experience</span>
@@ -95,9 +95,12 @@ export default{
 }
 .customeducationtext{
     color: rgba(2, 3, 34, .6);
-    font-family: wfont_1f4e5a_a4dab464d39a4954a3f7d14cdb48d3ed, wf_a4dab464d39a4954a3f7d14cd, orig_wix_madefor_display_regular;
-    font-size: max(0.5px, 0.0416667*(var(--scaling-factor) - var(--scrollbar-width)));
-    text-decoration: none;
+    font-family: var(--rr-ff-body);
+        color: var(--rr-text-body);
+        font-weight: var(--rr-fw-regular);
+        font-size: 14px;
+       
+        line-height: 1.4;
 
 }
 </style>

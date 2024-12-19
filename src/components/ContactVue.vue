@@ -1,7 +1,9 @@
 
 
 <template>
-    <div id="contact">
+    <div id="contact" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
        
         <v-row class="pt-10 ">
             <v-col cols="12" md="12" xs="12" >

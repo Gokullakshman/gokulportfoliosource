@@ -4,7 +4,8 @@
 
       
        <HelloImage ></HelloImage>
-        <SkillsSet></SkillsSet>
+        <SkillsSet  
+       ></SkillsSet>
         <ExperienceVue></ExperienceVue>
         <EducationVue/>
         <ContactVue></ContactVue>

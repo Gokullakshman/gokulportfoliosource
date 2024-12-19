@@ -3,13 +3,15 @@
           <v-col>
                 
         <v-navigation-drawer
-        v-if="Drawer==true"
-        class="d-md-none" 
+        v-if="drawer==true"
+        class="d-md-none white" 
         absolute
       dark
-      width="80%"
+      width="100%"
       permanent
-      style="background-color: rgba(0, 0, 0, 0.1); height: 100vh;"
+      bottom
+      style=" position: fixed; overflow: hidden;"
+    
     >
       <v-list class="mt-12">
         <v-list-item
@@ -20,7 +22,7 @@
           <v-list-item-icon>
             <v-icon  >{{ val[0] }}</v-icon>
           </v-list-item-icon>
-          <v-btn text @click="setActive(val[1])">{{ val[1] }}</v-btn>
+          <v-btn  class="black--text" text @click="setActive(val[1])">{{ val[1] }}</v-btn>
 
           <!-- <v-list-item-content>
             <v-list-item-title  >{{ val[1] }}</v-list-item-title>
@@ -46,13 +48,20 @@
         ["mdi mdi-briefcase-outline", "Experience"],
         ["mdi-account-box", "Contact"],
       ],
+      drawer:null
       }
     },
     props:{
       Drawer:Boolean
     },
+    watch:{
+      Drawer(newval){
+        this.drawer = newval
+      }
+    },
     methods: {
     setActive(item) {
+      this.drawer = false
       this.activeItem = item;
 
       // Scroll to the section by its ID

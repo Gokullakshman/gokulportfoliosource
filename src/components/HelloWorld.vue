@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: rgba(242, 243, 247, 1);" class="pt-4 pb-4">
+  <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right">
     <v-container fill-height  id="about"  >
 
   
@@ -111,6 +111,14 @@ export default{
     --tw-text-opacity: 1;
     color: rgb(77 77 77 / var(--tw-text-opacity));
 }
+
+/* color: rgba(2, 3, 34, .6);
+    font-family: var(--rr-ff-body);
+        color: var(--rr-text-body);
+        font-weight: var(--rr-fw-regular);
+        font-size: 14px;
+       
+        line-height: 1.4;  kathiravan*/
 
 
 

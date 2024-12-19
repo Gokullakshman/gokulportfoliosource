@@ -14,7 +14,7 @@
  <v-col xs="12" md="6" :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
   
   <v-card
-
+ data-aos="fade-right"
 rounded
 outlined
 
@@ -62,6 +62,7 @@ class="rounded-lg"
   <v-card
   outlined
   rounded
+  data-aos="fade-left"
   
 
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
@@ -96,6 +97,7 @@ style="background-color: rgba(242, 243, 247, 0.3);"
  <v-row class="mb-6">
   <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-6 ml-2">
     <v-card
+    data-aos="fade-bottom"
     outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
@@ -163,7 +165,7 @@ class="rounded-lg"
   font-size: 28px;
     font-weight: 600;
     color: rgb(0, 0, 0);
-    font-family: Poppins, sans-serif;
+    font-family: "Inter VF", "Inter", sans-serif;
  }
  .headingH6{
   font-size: 10px;

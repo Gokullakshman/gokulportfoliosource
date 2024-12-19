@@ -5,6 +5,12 @@ import vuetify from './plugins/vuetify'
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
 
+import AOS from 'aos';         // JavaScript functionality
+import 'aos/dist/aos.css';    // CSS styles
+
+AOS.init();                   // Initialize AOS
+
+
 
 Vue.use(Toast, {
   transition: "Vue-Toastification__bounce",

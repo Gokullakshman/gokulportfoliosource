@@ -1,5 +1,5 @@
 <template>
-    <div id="education">
+    <div id="education" >
         <v-row >
             <v-col cols="12" md="12" xs="12">
                 <p class="black--text text-h4 d-flex justify-center font-weight-light">Education</p>
@@ -9,7 +9,7 @@
             </v-col>
           
 
-            <v-col md="12" xs="12" class="d-flex justify-center" v-for="(n,index) in EducationDetails" :key="index">
+            <v-col md="12" xs="12" class="d-flex justify-center" v-for="(n,index) in EducationDetails" :key="index" data-aos="fade-up-right">
                 
                 <v-card  rounded outlined   style="background-color: rgba(242, 243, 247, 1);"  class=" v-scroll-animation"
         :class="{ 'active-hover': ActiveIndex === index }"
