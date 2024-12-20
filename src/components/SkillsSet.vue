@@ -1,9 +1,9 @@
 <template>
-  <div id="skills" class="mt-3">
+  <div id="skills" class="mt-7">
      <v-row >
-  <v-col cols="12" xs="12" md="12" class="d-flex justify-center display-1 font-weight-light black--text ">Skills</v-col>
+  <v-col cols="12" xs="12" md="12" :class="{'d-flex justify-center display-1 font-weight-light black--text':$vuetify.breakpoint.mdAndUp,'d-flex justify-center  sansboldtitle':$vuetify.breakpoint.mobile}">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">
-    <p   :class="{'d-flex justify-center text-paragraph ':$vuetify.breakpoint.mdAndUp ,'text-h6 font-weight-medium':$vuetify.breakpoint.mobile}">
+    <p   :class="{'d-flex justify-center text-paragraph ':$vuetify.breakpoint.mdAndUp ,'sanslightDescribe':$vuetify.breakpoint.mobile}">
       Here are some of my skills,which i have been working on web
       <template v-if="$vuetify.breakpoint.mdAndUp">
         <br>
@@ -27,12 +27,12 @@ class="rounded-lg"
 
 >
 <v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading ">Front<strong>end</strong></span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sansboldtitle">Frontend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="green">mdi-vuejs</v-icon><span class="black--text caption">VueJs</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="green">mdi-vuejs</v-icon><span class="black--text sanssmall">VueJs</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="yellow">mdi-language-javascript</v-icon><span class="black--text caption">Javascript</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="yellow">mdi-language-javascript</v-icon><span class="black--text sanssmall">Javascript</span></v-chip>
 </v-col>
 </v-row>
 
@@ -40,13 +40,13 @@ class="rounded-lg"
 
 <v-row class="mt-1">
 <v-col  xs="6" md="6"  :class="{'d-flex justify-end  ':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="orange">mdi-language-html5</v-icon><span class="black--text">HTML</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="orange">mdi-language-html5</v-icon><span class="black--text sanssmall">HTML</span></v-chip>
 </v-col>
 <v-col  xs="6" md="6"  :class="{'d-flex justify-start':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-css3</v-icon><span class="black--text">CSS</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-css3</v-icon><span class="black--text sanssmall">CSS</span></v-chip>
 </v-col>
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-vuetify</v-icon><span class="black--text">Vuetify</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-vuetify</v-icon><span class="black--text sanssmall">Vuetify</span></v-chip>
 </v-col>
 </v-row>
 
@@ -72,12 +72,12 @@ style="background-color: rgba(242, 243, 247, 0.3);"
         @mouseover="ActiveIndex=2"  @mouseleave="ActiveIndex=0"
 
 ><v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-6"><span class="Heading">Backend</span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-6"><span class="sansboldtitle">Backend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="black--text caption">Java</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="black--text sanssmall">Java</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-go</v-icon><span class="black--text caption">Golang </span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-go</v-icon><span class="black--text sanssmall">Golang </span></v-chip>
 </v-col>
 </v-row>
 
@@ -86,7 +86,7 @@ style="background-color: rgba(242, 243, 247, 0.3);"
 <v-row class="mt-1">
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-database</v-icon><span class="black--text">MySQL</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-database</v-icon><span class="black--text sanssmall">MySQL</span></v-chip>
 </v-col>
 </v-row>
 
@@ -107,12 +107,12 @@ class="rounded-lg"
         style="background-color: rgba(242, 243, 247, 0.3);"
 
 ><v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="Heading">Other Tools</span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sansboldtitle">Other Tools</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text caption">Git</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text sanssmall">Git</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label><v-img src="../assets/github.png" height="18" width="18" class="pa-4"></v-img><span class="black--text caption">Github</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label><v-img src="../assets/github.png" height="18" width="18" class="pa-4"></v-img><span class="black--text sanssmall">Github</span></v-chip>
 </v-col>
 </v-row>
 
@@ -121,11 +121,11 @@ class="rounded-lg"
 <v-row class="mt-1"> 
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" height="20" label><v-img src="../assets/postman.png" height="2" width="2" class="pa-4"></v-img><span class="black--text">Postman</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" height="20" label><v-img src="../assets/postman.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">Postman</span></v-chip>
 </v-col> 
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center ':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white"  label><v-img src="../assets/Vs.png" height="2" width="2" class="pa-4"></v-img><span class="black--text">VSCode</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white"  label><v-img src="../assets/Vs.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">VSCode</span></v-chip>
 </v-col>
 </v-row>
 
@@ -159,7 +159,7 @@ class="rounded-lg"
 
 
 
-<style scoped>
+<style >
 
  .Heading{
   font-size: 28px;
@@ -186,5 +186,22 @@ class="rounded-lg"
   border-color: #000000 !important; /* Green border on hover */
   background-color: rgba(0, 0, 0, 0); /* Light green background on hover */
   transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+.sansboldtitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 520;
+  font-size: 30px;
+}
+.sanslightDescribe {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 490;
+  font-size: 16px;
+  
+  font-style:var();
+}
+.sanssmall{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 430;
+  font-size: 14px;
 }
 </style>

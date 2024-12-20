@@ -1,9 +1,9 @@
 <template>
-  <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right">
+  <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right" class="mt-6">
     <v-container fill-height  id="about"  >
 
   
-<v-row class="mt-2 d-flex justify-space-around">
+<v-row class="mt-2 d-flex justify-space-around" >
   <v-col
     md="6"
     xs="12"
@@ -11,8 +11,8 @@
       'd-flex justify-end pl-10  text-center text-h6 pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
     v-show="$vuetify.breakpoint.mdAndUp"
   >   
-        <v-col column cols="12" class="mt-7">
-          <p  class=" text-paragraph"> 
+        <v-col column cols="12" :class="{'mt-7':$vuetify.breakpoint.mdAndUp}">
+          <p  class="sanslight"> 
           <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter black--text">Hi,&nbsp;I am &nbsp; <a class="font-weight-bold display-1 black--text">Gokul S</a></span>
           
           As a full-stack web developer
@@ -45,14 +45,14 @@
   
 
   <v-col cols="12" xs="12" md="6" :class="{
-      'd-flex justify-center ': $vuetify.breakpoint.xsOnly,
+      'd-flex justify-center ml-4 mt-4 ': $vuetify.breakpoint.xsOnly,
       
       'd-flex justify-end ': !$vuetify.breakpoint.xsOnly,
       'order-1':$vuetify.breakpoint.mdAndUp,'order-0':$vuetify.breakpoint.mobile
-    }">
+    }" no-gutters>
     <v-img
       lazy-src="../assets/developer.png"
-      :height="$vuetify.breakpoint.mobile ? '283' :'433'"
+      :height="$vuetify.breakpoint.mobile ? '213' :'433'"
       max-width="362"
       src="../assets/developer.png"
     ></v-img>
@@ -86,7 +86,7 @@ export default{
 }
 
 </script>
-<style>
+<style scoped>
 .typewriter {
   overflow: hidden; 
   white-space: nowrap;
@@ -110,6 +110,24 @@ export default{
     letter-spacing: -.009375rem;
     --tw-text-opacity: 1;
     color: rgb(77 77 77 / var(--tw-text-opacity));
+}
+.sanslight {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 280;
+  font-size: 17px;
+  
+  font-style:var();
+}
+
+.sansbold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  font-size: 10px;
+}
+
+.sansitalic {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
 }
 
 /* color: rgba(2, 3, 34, .6);
