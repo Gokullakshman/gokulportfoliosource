@@ -11,10 +11,10 @@
       development
     </p>
   </v-col>
- <v-col xs="12" md="6" :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
+ <v-col xs="12" md="6" data-aos="fade-up-right" :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
   
   <v-card
- data-aos="fade-right"
+
 rounded
 outlined
 
@@ -27,7 +27,7 @@ class="rounded-lg"
 
 >
 <v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sansboldtitle">Frontend</span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sanslight" style=" font-weight: 370;  font-size: 27px;">Frontend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="green">mdi-vuejs</v-icon><span class="black--text sanssmall">VueJs</span></v-chip>
 </v-col>
@@ -58,11 +58,11 @@ class="rounded-lg"
 
  </v-col> 
 
- <v-col xs="12" md="6"  :class="{'d-flex justify-center ml-1 mt-6 mb-4':$vuetify.breakpoint.mobile}" >
+ <v-col xs="12" md="6"  :class="{'d-flex justify-center ml-1 mt-6 mb-4':$vuetify.breakpoint.mobile}" data-aos="fade-up-left">
   <v-card
   outlined
   rounded
-  data-aos="fade-left"
+
   
 
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
@@ -72,7 +72,7 @@ style="background-color: rgba(242, 243, 247, 0.3);"
         @mouseover="ActiveIndex=2"  @mouseleave="ActiveIndex=0"
 
 ><v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-6"><span class="sansboldtitle">Backend</span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-6"><span class="sanslight" style=" font-weight: 300;  font-size: 27px;">Backend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="black--text sanssmall">Java</span></v-chip>
 </v-col>
@@ -95,9 +95,9 @@ style="background-color: rgba(242, 243, 247, 0.3);"
  </v-col> 
 
  <v-row class="mb-6">
-  <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-6 ml-2">
+  <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-2 ml-2" data-aos="fade-up-left">
     <v-card
-    data-aos="fade-bottom"
+    data-aos="fade-up-left"
     outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"
@@ -107,7 +107,7 @@ class="rounded-lg"
         style="background-color: rgba(242, 243, 247, 0.3);"
 
 ><v-row >
-<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sansboldtitle">Other Tools</span> </v-col>
+<v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sanslight" style=" font-weight: 300;  font-size: 27px;">Other Tools</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text sanssmall">Git</span></v-chip>
 </v-col>

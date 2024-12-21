@@ -24,12 +24,11 @@
           realm through my creative contributions. 
           
          </p> 
-         <v-btn   outlined large color="black" class="black--text" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
+         <v-btn   outlined large color="black" class="black--text sansbold" style="font-size: 13px;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       
        
-
         
 
         

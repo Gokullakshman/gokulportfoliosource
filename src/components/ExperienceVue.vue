@@ -2,10 +2,10 @@
     <div id="experience" data-aos="zoom-in-up">
         <v-row >
         <v-col cols="12" xs="12" md="12" class="d-flex justify-center">
-            <span class="black--text text-h4 font-weight-light">Experience</span>
+            <span class="black--text sansboldtitle">Experience</span>
         </v-col>
         <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-            <p  class="text-center text-paragraph"    :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
+            <p  class="text-center sanslightDescribeExperience"    :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp }" style="max-width: 600px;">Here I present my journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance, and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
         </v-col>
         
     </v-row> 
@@ -102,5 +102,12 @@ export default{
        
         line-height: 1.4;
 
+}
+.sanslightDescribeExperience {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 490;
+  font-size: 15px;
+  font-style:italic
+  ;
 }
 </style>
