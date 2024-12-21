@@ -13,7 +13,19 @@
   >   
         <v-col column cols="12" :class="{'mt-7':$vuetify.breakpoint.mdAndUp}">
           <p  class="sanslight"> 
-          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter black--text">Hi,&nbsp;I am &nbsp; <a class="font-weight-bold display-1 black--text">Gokul S</a></span>
+          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter black--text"><vue-typer
+  :text='["Hi Iam Gokul S","Full Stack Developer","Vue js","Golang","MySQL"]'
+  :repeat='Infinity'
+  :shuffle='false'
+  initial-action='typing'
+  :pre-type-delay='100'
+  :type-delay='70'
+  :pre-erase-delay='2000'
+  :erase-delay='250'
+  erase-style='select-all'
+  :erase-on-complete='false'
+  caret-animation='blink'
+></vue-typer></span>
           
           As a full-stack web developer
           with a passion for blockchain and finance, I leverage my diverse
@@ -72,6 +84,7 @@
 </template>
 
 <script>
+import { VueTyper } from 'vue-typer'
 export default{
   methods:{
     viewResume() {
@@ -80,6 +93,9 @@ export default{
       window.open(resumeUrl, "_blank");
     }
 
+  },
+  components:{
+    VueTyper
   }
   
 }
@@ -126,7 +142,22 @@ export default{
   font-family: "Open Sans", sans-serif;
   font-style: italic;
 }
+.vue-typer {
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+}
 
+.vue-typer .custom.char.typed {
+  color: #607D8B;
+}
+.vue-typer .custom.char.selected {
+  color: #607D8B;
+  background-color: transparent;
+  text-decoration: line-through;
+}
+
+.vue-typer .custom.caret {
+  display: none;
+}
 /* color: rgba(2, 3, 34, .6);
     font-family: var(--rr-ff-body);
         color: var(--rr-text-body);

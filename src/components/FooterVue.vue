@@ -16,16 +16,18 @@
       width="1900"
     >
       <v-card-text>
+         <!-- :color="hoveredindex == index ? 'currentcolor' : 'defaultcolor'" -->
         <v-btn
           v-for="(n,index) in socialmedia"
           :key="n.icon"
           :href="n.link"
           class="mx-4 "
           icon
-          :color="hoveredindex == index ? 'currentcolor' : 'defaultcolor'"
-          @mouseover="hoveredindex = index && getcolor(index)"
+         :color="hoveredindex == index ? currentcolor :defaultcolor"
+          @mouseover="getcolor(index)"
           @mouseleave="hoveredindex = null"
           target="_blank"
+          
          
         >
           <v-icon size="24px" >
@@ -37,13 +39,13 @@
       <v-card-text class="white--text pt-0">
         <v-col cols="12">
             <v-btn
-          v-for="link in links"
+          v-for="(link,index) in links"
           :key="link"
-          class="white--text text-capitalize"
-          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'black--text':hoveredlink == link}"
+          class="white--text sansfooter"
+          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'black--text':hoveredlink == index}"
           text
            @click="setActive(link)"
-           @mouseover="SetHoveredLink(link)"
+           @mouseover="SetHoveredLink(index)"
            @mouseleave="RemoveHoveredLink"
            
         >
@@ -57,7 +59,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        <v-icon color="green">mdi-whatsapp</v-icon>&nbsp; <strong  class="black--text">+91 6383163259</strong>
+        <v-icon color="green">mdi-whatsapp</v-icon>&nbsp; <strong  class="white--text">+91 6383163259</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -68,7 +70,7 @@
     data: () => ({
       socialmedia: [{
         icon:'mdi-instagram',
-        link:"https://github.com/Gokullakshman",
+        link:"https://www.instagram.com/gokul_karthii/",
         color:"pink"
       },
       {
@@ -88,7 +90,7 @@
       },
       {
         icon:'mdi-gmail',
-        link:"https://github.com/Gokullakshman",
+        link:"https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNvwDjzHGFgMrCWGFqVLKBKHLhbfMthXxJnPnpDKLBPTjWmdwVxtWTCFWdWLMdJRKcCPnB",
         color:"red"
       }
        
@@ -108,7 +110,7 @@
       currentcolor:"",
       currentindex:null,
       hoveredindex:null,
-      defaultcolor:"black"
+      defaultcolor:"white"
     }),
     methods:{
       setActive(item) {
@@ -133,7 +135,7 @@
       console.log("this.socialmedia[index].color",this.socialmedia[index].color)
        
         this.currentcolor= this.socialmedia[index].color
-  
+        this.hoveredindex = index
      
 
     }
@@ -144,6 +146,16 @@
     
   }
 </script>
-<style></style>
+<style>
+
+.sansfooter{
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+
+
+}
+
+</style>
 
 

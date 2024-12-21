@@ -6,7 +6,14 @@ import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
 
 import AOS from 'aos';         // JavaScript functionality
-import 'aos/dist/aos.css';    // CSS styles
+import 'aos/dist/aos.css';  
+
+import VueGoodLinks from 'vue-good-links';
+
+// import the styles 
+import 'vue-good-links/dist/vue-good-links.css';
+
+Vue.use(VueGoodLinks);
 
 AOS.init();                   // Initialize AOS
 

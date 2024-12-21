@@ -2,6 +2,7 @@
     <div id="experience" data-aos="zoom-in-up">
         <v-row>
             <v-col cols="12" xs="12" md="12" class="d-flex justify-center">
+                
                 <span class="black--text sansboldtitle">Experience</span>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
@@ -19,12 +20,12 @@
                 <v-card rounded outlined style="background-color: rgba(242, 243, 247, 0.3);"  class="rounded-lg"
                     :class="{ 'active-hover': expand }" @mouseover="expand = true" @mouseleave="expand = false"
                     :width="$vuetify.breakpoint.mdAndUp ? '600' : '350'"
-                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440' : '510') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
+                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440' : '510') : ($vuetify.breakpoint.mdAndUp ? '260' : '330')">
                     <v-row>
                         <v-col cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                             <v-sheet color="white" elevation="9" height="35" outlined rounded shaped width="35"><v-img
                                     src="../assets/flattrade.png"></v-img></v-sheet>
-                            <span class=" pl-4 font-weight-bold mt-4 black--text">Software Engineer <br> <span
+                            <span class=" pl-4 font-weight-bold mt-4 black--text">Software Developer <br> <span
                                     class="black--text caption">Flattrade</span>
                                 <br><span class="caption">March 2024 -Till</span></span>
                         </v-col>
@@ -32,7 +33,7 @@
 
                     <v-row class="mb-4" no-gutters>
                         <v-col cols="12" xs="12" md="12" class="pl-4">
-                            <p class="pa-1 sanslight">{{ expand ? fulltext : truncatetext }}<span
+                            <p class="pa-1 sanslightdesk" :class="{'sanslight':$vuetify.breakpoint.mobile}">{{ expand ? fulltext : truncatetext }}<span
                                     v-if="$vuetify.breakpoint.mobile && !expand" @click="expand = true"
                                     class="caption ml-3 info--text">seemore...</span> <span
                                     v-if="$vuetify.breakpoint.mobile && expand" @click="expand = false"
@@ -120,10 +121,15 @@ export default {
     font-weight: 400;
     font-size: 13px;
 }
+.sanslightdesk{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 440;
+    font-size: 15px;
+}
 
 .sansbold {
     font-family: "Open Sans", sans-serif;
-    font-weight: 490;
+    font-weight: 690;
     font-size: 16px;
 }
 </style>

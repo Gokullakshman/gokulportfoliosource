@@ -7,10 +7,10 @@
        
         <v-row class="pt-10 ">
             <v-col cols="12" md="12" xs="12" >
-                <span class="black--text d-flex justify-center text-h4 font-weight-light">Get in touch</span>
+                <span class="black--text d-flex justify-center sansboldtitle">Get in touch</span>
             </v-col>
             <v-col cols="12" md="12" xs="12" >
-                <span class="black--text d-flex justify-center px-6  text-paragraph">Feel free to reach out to me for any questions or &nbsp; <span class="black--text">opportunities!</span>
+                <span class="black--text d-flex justify-center px-6 sanslightDescribeExperience ">Feel free to reach out to me for any questions or opportunities!
                     </span>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
@@ -19,7 +19,7 @@
 
                 <v-row class="mt-6">
                     <v-col cols="12" md="12" xs="12">
-                        <span class="black--text text-h6 pa-7">Email Me 🚀</span>
+                        <span class="black--text sanslightDescribeExperience pa-7">Email Me 🚀</span>
                     </v-col>
                     <v-col cols="12" md="12"  class="d-flex justify-center">
                         <input
@@ -57,7 +57,7 @@
                        <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" v-model="mailDetails.description"></textarea>
                     </v-col>
                     <v-col  xs="10" class="d-flex justify-center px-10">
-                       <v-btn class="white--text font-weight-light black"  block height="40" @click="SendEmailProcess()">Send</v-btn>
+                       <v-btn  :outlined="!SendButton"  :class="{'white--text font-weight-light black': SendButton, 'black--text font-weight-bold' :!SendButton}" @mouseover="SendButton = true" @mouseleave="SendButton = false"  block height="40" @click="SendEmailProcess()">Send</v-btn>
                     </v-col>
                 </v-row>
 
@@ -86,7 +86,8 @@ export default{
                 yourname:"",
                 subject:"",
                 description:""
-            }
+            },
+            SendButton:false
         }
     },
 

@@ -3,7 +3,7 @@
      <v-row >
   <v-col cols="12" xs="12" md="12" :class="{'d-flex justify-center display-1 font-weight-light black--text':$vuetify.breakpoint.mdAndUp,'d-flex justify-center  sansboldtitle':$vuetify.breakpoint.mobile}">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">
-    <p   :class="{'d-flex justify-center text-paragraph ':$vuetify.breakpoint.mdAndUp ,'sanslightDescribe':$vuetify.breakpoint.mobile}">
+    <p   :class="{'d-flex justify-center sanslightDescribeExperience':$vuetify.breakpoint.mdAndUp ,'sanslightDescribe':$vuetify.breakpoint.mobile}">
       Here are some of my skills,which i have been working on web
       <template v-if="$vuetify.breakpoint.mdAndUp">
         <br>
