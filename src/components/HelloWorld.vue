@@ -114,8 +114,6 @@ export default{
   font-family: "Open Sans", sans-serif;
   font-weight: 280;
   font-size: 17px;
-  
-  font-style:var();
 }
 
 .sansbold {

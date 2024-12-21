@@ -2,10 +2,10 @@
     <div id="education" >
         <v-row >
             <v-col cols="12" md="12" xs="12">
-                <p class="black--text text-h4 d-flex justify-center font-weight-light">Education</p>
+                <p class="black--text  d-flex justify-center sansboldtitle">Education</p>
             </v-col>
-            <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
-                <p  style="max-width: 600px;" class="text-paragraph  text-center d-flex justify-center"  :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
+            <v-col cols="12" md="12" xs="12" class="d-flex justify-center" no-gutters   >
+                <p  style="max-width: 600px;" class="sanslightDescribeExperience  text-center d-flex justify-center"  :class="{'text-paragraph':$vuetify.breakpoint.mdAndUp}"  >My education has been a journey of self-discovery and growth. My educational details are as follows.</p>
             </v-col>
           
 
@@ -35,14 +35,14 @@
                     </v-col>
                     <v-col md="9" xs="3" class="mt-2 ml-2">
                         <p  style="  
-    font-family: Poppins, sans-serif;" class="font-weight-bold text-paragraph">{{ n.name }}<br><span class="font-weight-light ">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
+    font-family: Poppins, sans-serif;" class="font-weight-bold text-paragraph">{{ n.name }}<br><span class="font-weight-light" :class="{'sanslightDescribeEducation' : $vuetify.breakpoint.mobile}">{{ n.degree }}</span><br><span class="font-weight-light caption" >{{ n.year }}</span></p>
 
                         <!-- <p class="black--text" no-gutters>Bachelor of Computer Applications</p> -->
                     </v-col>
                     <v-col md="2">
 
                     </v-col>
-                    <span  class="design d-flex justify-start d-block mb-6 pl-2" :class="{'caption':$vuetify.breakpoint.mobile}">{{ n.cgpa }}<br>{{ n.description }}</span>
+                    <span  class="sanslightDescribeEducation d-flex justify-start d-block mb-6 pl-2" :class="{'caption':$vuetify.breakpoint.mobile}">{{ n.cgpa }}<br>{{ n.description }}</span>
                     <!-- <span  class="white--text d-flex justify-start d-block">Welcome</span> -->
                  </v-row>
                  <v-row>
@@ -116,10 +116,10 @@ export default{
     text-decoration: none;
 
 } this is okay now for comment for other sedigns      */ 
-.design{
-    color: #707177;
-    font-size: 16px;
-    font-weight: 170;
+.sanslightDescribeEducation {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 450;
+    font-size: 14px;
 }
 
 </style>

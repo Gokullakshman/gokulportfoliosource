@@ -22,8 +22,9 @@
           :href="n.link"
           class="mx-4 "
           icon
-          :color="currentcolor"
-          @mouseover="getcolor(index)"
+          :color="hoveredindex == index ? 'currentcolor' : 'defaultcolor'"
+          @mouseover="hoveredindex = index && getcolor(index)"
+          @mouseleave="hoveredindex = null"
           target="_blank"
          
         >
@@ -84,6 +85,11 @@
         icon:'mdi-github',
         link:"https://github.com/Gokullakshman",
         color:"white"
+      },
+      {
+        icon:'mdi-gmail',
+        link:"https://github.com/Gokullakshman",
+        color:"red"
       }
        
         
@@ -96,9 +102,13 @@
         'Experience',
         'Contact',
         
+        
       ],
       hoveredlink:null,
-      currentcolor:""
+      currentcolor:"",
+      currentindex:null,
+      hoveredindex:null,
+      defaultcolor:"black"
     }),
     methods:{
       setActive(item) {
@@ -120,7 +130,12 @@
         this.hoveredlink = null
     },
     getcolor(index){
-     this.currentcolor= this.socialmedia[index].color
+      console.log("this.socialmedia[index].color",this.socialmedia[index].color)
+       
+        this.currentcolor= this.socialmedia[index].color
+  
+     
+
     }
 
     }
@@ -129,5 +144,6 @@
     
   }
 </script>
+<style></style>
 
 
