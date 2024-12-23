@@ -20,7 +20,7 @@
                 <v-card rounded outlined style="background-color: rgba(242, 243, 247, 0.3);"  class="rounded-lg"
                     :class="{ 'active-hover': expand }" @mouseover="expand = true" @mouseleave="expand = false"
                     :width="$vuetify.breakpoint.mdAndUp ? '600' : '350'"
-                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440' : '510') : ($vuetify.breakpoint.mdAndUp ? '260' : '330')">
+                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440' : '650') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
                     <v-row>
                         <v-col cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                             <v-sheet color="white" elevation="9" height="35" outlined rounded shaped width="35"><v-img
@@ -112,7 +112,7 @@ export default {
 .sanslightDescribeExperience {
     font-family: "Open Sans", sans-serif;
     font-weight: 490;
-    font-size: 15px;
+    font-size: 16px;
     font-style: italic;
 }
 

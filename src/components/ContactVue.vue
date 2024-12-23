@@ -1,16 +1,14 @@
 
 
 <template>
-    <div id="contact" data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+    <div id="contact">
        
-        <v-row class="pt-10 ">
+        <v-row class="pt-10" data-aos="zoom-in">
             <v-col cols="12" md="12" xs="12" >
                 <span class="black--text d-flex justify-center sansboldtitle">Get in touch</span>
             </v-col>
             <v-col cols="12" md="12" xs="12" >
-                <span class="black--text d-flex justify-center px-6 sanslightDescribeExperience ">Feel free to reach out to me for any questions or opportunities!
+                <span class="black--text d-flex justify-center px-6 sanslightDescribeExperience">Have questions or opportunities? I’m just a message away!
                     </span>
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
@@ -173,12 +171,28 @@ font-weight: 300;
 
 }
 
-::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder { 
 padding: 10px;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder { 
 padding: 10px;
+}
+input {
+  padding-left: 10px; /* Matches placeholder padding */
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.009375rem;
+  --tw-text-opacity: 4;
+  color: rgb(77 77 77 / var(--tw-text-opacity)); /* Normal text color */
+}
+
+input::placeholder {
+  padding-left: 0; /* No extra padding for placeholder */
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.009375rem;
+  color: rgb(77 77 77 / var(--tw-text-opacity)); /* Placeholder color */
 }
 
 </style>

@@ -2,7 +2,6 @@
   <div fill-height class="fixed-top">
     <v-row>
       <v-col xs12>
-        <!-- For Mobile: Show only Portfolio -->
         <v-row class="pa-1">
           <v-col sm="12" class="d-md-none">
             <v-row>
@@ -19,9 +18,10 @@
                 <v-app-bar-nav-icon
                   color="black"
                   large
-                  @click.stop="Drawer = !Drawer"
+                 @click="Drawertrue()"
                 ></v-app-bar-nav-icon>
               </v-col>
+              <NavigationVue   :Drawer="Drawer" />
             </v-row>
           </v-col>
         </v-row>
@@ -31,8 +31,8 @@
           justify-end
           align-center
           v-show="$vuetify.breakpoint.mdAndUp"
-          class="white"
-          data-aos="fade-left "
+          class="white pa-2"
+          data-aos="fade-left"
         >
           <v-col md="3" class="d-flex justify-end align-center">
             <v-icon large color="black">mdi-face-man-profile</v-icon
@@ -60,14 +60,15 @@
           </v-col>
         </v-row>
       </v-col>
+     
     </v-row>
 
-    <!-- <NavigationVue :Drawer="Drawer" /> -->
+    
   </div>
 </template>
 
 <script>
-// import NavigationVue from '../components/NavigationVue.vue';
+import NavigationVue from '../components/NavigationVue.vue';
 
 export default {
   data() {
@@ -80,26 +81,40 @@ export default {
     };
   },
   components: {
-    // NavigationVue,
+     NavigationVue,
   },
 
   methods: {
     setActive(item) {
+    
       this.activeItem = item;
 
       // Scroll to the section by its ID
       const targetSection = document.getElementById(item.toLowerCase());
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start", // You can adjust this based on where you want the section to land
-        });
-      }
+if (targetSection) {
+  const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+
+  // Scroll to the target with an offset of 8px
+  window.scrollTo({
+    top: targetPosition + 10, // Adjust the position
+    behavior: "smooth", // Smooth animation
+  });
+}
+
     },
     mapBlackColor(index) {
       this.blackcolorindex = index;
     },
+    Drawertrue(){
+      this.$drawer = true
+      console.log("this.$drawer",this.$drawer)
+    }
   },
+  mounted:{
+    call(){
+      console.log(this.$drawer)
+    }
+  }
 };
 </script>
 
@@ -165,6 +180,7 @@ ul li:hover {
 
 font-family: "Open Sans", sans-serif;
 font-weight: 600;
+text-transform: capitalize;
 
 
 }

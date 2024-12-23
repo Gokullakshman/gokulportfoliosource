@@ -3,7 +3,7 @@
      <v-row >
   <v-col cols="12" xs="12" md="12" :class="{'d-flex justify-center display-1 font-weight-light black--text':$vuetify.breakpoint.mdAndUp,'d-flex justify-center  sansboldtitle':$vuetify.breakpoint.mobile}">Skills</v-col>
   <v-col cols="12" md="12" xs="12" class="text-center">
-    <p   :class="{'d-flex justify-center sanslightDescribeExperience':$vuetify.breakpoint.mdAndUp ,'sanslightDescribe':$vuetify.breakpoint.mobile}">
+    <p   :class="{'d-flex justify-center sanslightDescribeExperience':$vuetify.breakpoint.mdAndUp ,'sanslightDescribeExperience':$vuetify.breakpoint.mobile}">
       Here are some of my skills,which i have been working on web
       <template v-if="$vuetify.breakpoint.mdAndUp">
         <br>
@@ -94,10 +94,9 @@ style="background-color: rgba(242, 243, 247, 0.3);"
 
  </v-col> 
 
- <v-row class="mb-6">
-  <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-2 ml-2" data-aos="fade-up-left">
+ <v-row class="mb-6" data-aos="fade-up-left">
+  <v-col  md="12" xs="12" lg="12" class="d-flex justify-center mt-6 mb-2 ml-2" >
     <v-card
-    data-aos="fade-up-left"
     outlined
 :height="$vuetify.breakpoint.mobile ? '300' :'250'"
 :width="$vuetify.breakpoint.mobile ? '300' :'380'"

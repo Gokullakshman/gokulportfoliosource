@@ -26,6 +26,7 @@ Vue.use(Toast, {
 });
 
 Vue.config.productionTip = false
+Vue.prototype.$drawer=false
 
 new Vue({
   router,

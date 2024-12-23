@@ -3,17 +3,20 @@
           <v-col>
                 
         <v-navigation-drawer
-        v-if="drawer==true"
+        
+        v-if="$drawer == true"
         class="d-md-none white" 
         absolute
       dark
       width="100%"
+      height="100%"
       permanent
       bottom
-      style=" position: fixed; overflow: hidden;"
+      style=" position: fixed;"
     
     >
       <v-list class="mt-12">
+        <v-icon color="black"  @click="$drawer=false">mdi-close</v-icon>
         <v-list-item
           v-for="(val, i) in items1"
           :key="i"
@@ -28,9 +31,7 @@
             <v-list-item-title  >{{ val[1] }}</v-list-item-title>
           </v-list-item-content> -->
         </v-list-item> 
-        <v-col>
-          <v-btn color="green" small  dense rounded href="https://github.com/Gokullakshman" target="_blank">Github profile</v-btn>
-        </v-col>
+      
 
         
       </v-list>

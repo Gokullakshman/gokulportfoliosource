@@ -1,6 +1,6 @@
 <template>
-  <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right" class="mt-6">
-    <v-container fill-height  id="about"  >
+  <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right" >
+    <v-container fill-height  id="about" :style="$vuetify.breakpoint.mdAndUp ? {'height':'800px'} : 'dd'" :class="{'mt-12' :$vuetify.breakpoint.mobile}">
 
   
 <v-row class="mt-2 d-flex justify-space-around" >
@@ -13,8 +13,9 @@
   >   
         <v-col column cols="12" :class="{'mt-7':$vuetify.breakpoint.mdAndUp}">
           <p  class="sanslight"> 
-          <span class="display-1 font-weight-bold d-flex justify-center mb-4 typewriter black--text"><vue-typer
-  :text='["Hi Iam Gokul S","Full Stack Developer","Vue js","Golang","MySQL"]'
+            <span class="sansbold" :style="$vuetify.breakpoint.mobile ? {'font-size':'29px'} : 'd'"  style="color: #C5B358;">Hi,Iam Gokul S</span>
+          <span class="font-weight-bold d-flex justify-center ma-4  black--text" :class="{'display-1' :$vuetify.breakpoint.mdAndUp}"><vue-typer
+  :text='["Full Stack Developer","Vue js","Golang","MySQL"]'
   :repeat='Infinity'
   :shuffle='false'
   initial-action='typing'
@@ -26,14 +27,17 @@
   :erase-on-complete='false'
   caret-animation='blink'
 ></vue-typer></span>
-          
-          As a full-stack web developer
+          <span :class="{'sanslight':$vuetify.breakpoint.mobile}" class="pa-4">
+            As a full-stack web developer
           with a passion for blockchain and finance, I leverage my diverse
           expertise to craft innovative solutions. With a background in
           mentorship and multiple project experiences, I bring versatility and
           a commitment to excellence to every endeavor. Continuously seeking
           growth and learning, I aim to make a positive impact in the digital
           realm through my creative contributions. 
+
+          </span>
+       
           
          </p> 
          <v-btn   outlined large color="black" class="black--text sansbold" style="font-size: 13px;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
@@ -102,22 +106,7 @@ export default{
 
 </script>
 <style scoped>
-.typewriter {
-  overflow: hidden; 
-  white-space: nowrap;
-  margin: 0 auto; 
-  letter-spacing: .15em; 
-  animation: 
-    typing 2.5s steps(20, end),
-    blink-caret .75s step-end infinite;
-   
-}
 
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
 
 .text-paragraph {
     font-weight: 400;
@@ -128,14 +117,15 @@ export default{
 }
 .sanslight {
   font-family: "Open Sans", sans-serif;
-  font-weight: 280;
-  font-size: 17px;
+  font-weight: 220;
+  font-size: 20px;
 }
 
 .sansbold {
   font-family: "Open Sans", sans-serif;
   font-weight: 900;
-  font-size: 10px;
+  font-size: 39px;
+  text-transform: capitalize
 }
 
 .sansitalic {
