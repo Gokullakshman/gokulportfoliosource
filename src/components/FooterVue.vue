@@ -1,5 +1,11 @@
 <template>
     <div>
+      <v-row>
+            <v-col cols="12" md="12" class="d-flex justify-end pr-10">
+                <v-icon  color="black" large @click="setActive('About')">mdi-arrow-up-circle</v-icon>
+            </v-col>
+      
+      </v-row>
         <v-footer
         id="footer"
         class="mt-5"
@@ -103,6 +109,7 @@
         'About',
         'Skills',
         'Experience',
+        'Education',
         'Contact',
         
         
@@ -115,17 +122,25 @@
     }),
     methods:{
       setActive(item) {
-      this.activeItem = item;
+  this.activeItem = item;
 
-      // Scroll to the section by its ID
-      const targetSection = document.getElementById(item.toLowerCase());
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start', // You can adjust this based on where you want the section to land
-        });
-      }
-    },
+  // Get the target section by ID
+  const targetSection = document.getElementById(item.toLowerCase());
+  if (targetSection) {
+    // Calculate target position including offset for navbar height
+    const navbarHeight = 60; // Replace 60 with your actual navbar height in pixels
+    const offset = 10; // Additional margin you want below the section
+    const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+
+    // Scroll to the target with the offset
+    window.scrollTo({
+      top: targetPosition - navbarHeight - offset, // Adjusted scroll position
+      behavior: "smooth", // Smooth animation
+    });
+  }
+
+ 
+},
     SetHoveredLink(val){
       this.hoveredlink = val
     },
@@ -153,7 +168,7 @@
 
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-
+  text-transform: capitalize;
 
 }
 

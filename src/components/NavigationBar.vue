@@ -18,10 +18,10 @@
                 <v-app-bar-nav-icon
                   color="black"
                   large
-                 @click="Drawertrue()"
+                 @click.stop="Drawer = !Drawer"
                 ></v-app-bar-nav-icon>
               </v-col>
-              <NavigationVue   :Drawer="Drawer" />
+              <NavigationVue :Drawer="Drawer" @drawerclose="Drawer=false"  />
             </v-row>
           </v-col>
         </v-row>
@@ -44,10 +44,13 @@
           <v-col md="9" class="d-flex align-end justify-end">
             <ul>
               <li v-for="(n, index) in navBarItem" :key="index">
+               <p></p> 
                 <v-btn
                   text
                   :class="{
                     'black white--text rounded-lg': blackcolorindex == index,
+                    'black white--text rounded-lg': activeItem == n ,
+                    
                   }"
                   @mouseover="mapBlackColor(index)"
                   @mouseleave="blackcolorindex = null"
@@ -86,22 +89,27 @@ export default {
 
   methods: {
     setActive(item) {
-    
-      this.activeItem = item;
+  console.log("item", item);
+  this.activeItem = item;
 
-      // Scroll to the section by its ID
-      const targetSection = document.getElementById(item.toLowerCase());
-if (targetSection) {
-  const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+  // Get the target section by ID
+  const targetSection = document.getElementById(item.toLowerCase());
+  if (targetSection) {
+    // Calculate target position including offset for navbar height
+    const navbarHeight = 60; // Replace 60 with your actual navbar height in pixels
+    const offset = 10; // Additional margin you want below the section
+    const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
 
-  // Scroll to the target with an offset of 8px
-  window.scrollTo({
-    top: targetPosition + 10, // Adjust the position
-    behavior: "smooth", // Smooth animation
-  });
-}
+    // Scroll to the target with the offset
+    window.scrollTo({
+      top: targetPosition - navbarHeight - offset, // Adjusted scroll position
+      behavior: "smooth", // Smooth animation
+    });
+  }
 
-    },
+
+},
+
     mapBlackColor(index) {
       this.blackcolorindex = index;
     },
