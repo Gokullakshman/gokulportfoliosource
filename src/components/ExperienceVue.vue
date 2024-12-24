@@ -7,10 +7,7 @@
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
                 <p class="text-center sanslightDescribeExperience"
-                    :class="{ 'text-paragraph': $vuetify.breakpoint.mdAndUp }" style="max-width: 600px;">Here I present my
-                    journey as a full-stack web developer, highlighting my extensive experience in blockchain, finance,
-                    and mentorship. Through my portfolio, I showcase the diverse projects and technologies I've
-                    mastered, demonstrating my expertise in web development and beyond.</p>
+                    :class="{ 'text-paragraph': $vuetify.breakpoint.mdAndUp }" style="max-width: 600px;">Here I present my journey as a full-stack web developer, highlighting my extensive experience and skills. Through my portfolio, I showcase the diverse technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
             </v-col>
 
         </v-row>
@@ -20,7 +17,7 @@
                 <v-card rounded outlined style="background-color: rgba(242, 243, 247, 0.3);"  class="rounded-lg"
                     :class="{ 'active-hover': expand }" @mouseover="expand = true" @mouseleave="expand = false"
                     :width="$vuetify.breakpoint.mdAndUp ? '600' : '350'"
-                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '440' : '650') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
+                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '490' : '740') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
                     <v-row>
                         <v-col cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                             <v-sheet color="white" elevation="9" height="35" outlined rounded shaped width="35"><v-img
@@ -72,8 +69,8 @@
 export default {
     data() {
         return {
-            truncatetext: "Led the successful development of an online flight booking application using ASP.NET MVC technology, contributing to its user-friendly and efficient design. Collaborated with cross-functional teams to design and implement multiple projects from conception to deployment, ensuring high-quality deliverables",
-            fulltext: "Led the successful development of an online flight booking application using ASP.NET MVC technology, contributing to its user-friendly and efficient design. Collaborated with cross-functional teams to design and implement multiple projects from conception to deployment, ensuring high-quality deliverables within project timelines. Applied expertise in ASP.NET MVC, C#, and SQL Server to build robust back-end logic, ensuring seamless integration with front-end components for a cohesive user experience. Specialized in implementing secure payment gateway integration within the flight booking application, ensuring seamless and reliable payment processing for customers. Demonstrated versatility by working on diverse projects, showcasing adaptability from online booking tools to Human Resource Management Systems (HRMS).",
+            truncatetext: "In my current role as a full-stack web developer, I am actively involved in developing a bug tracking system that allows employees to raise tickets for issues they encounter. This system streamlines the process of identifying and resolving bugs, enhancing overall productivity and collaboration within the....",
+            fulltext: "In my current role as a full-stack web developer, I am actively involved in developing a bug tracking system that allows employees to raise tickets for issues they encounter. This system streamlines the process of identifying and resolving bugs, enhancing overall productivity and collaboration within the teamAdditionally, I work on a release management feature where employees can submit requests, specifying the branch name and repository for their changes. This functionality ensures that all code updates are organized and easily accessible, facilitating a smoother transition to live environments.By implementing these systems, I contribute to improving workflow efficiency and ensuring that our development processes are transparent and well-managed. My experience in this role has deepened my understanding of both front-end and back-end development, as well as the importance of effective communication within a team. I am committed to delivering high-quality solutions that meet the needs of our users and support the company's goals",
             expand: false
         }
     },

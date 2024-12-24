@@ -15,11 +15,11 @@
               </v-col>
               <v-spacer></v-spacer>
               <v-col class="d-flex justify-end">
-                <v-app-bar-nav-icon
+                <!-- <v-app-bar-nav-icon
                   color="black"
                   large
                  @click.stop="Drawer = !Drawer"
-                ></v-app-bar-nav-icon>
+                ></v-app-bar-nav-icon> -->
               </v-col>
               <NavigationVue :Drawer="Drawer" @drawerclose="Drawer=false"  />
             </v-row>
