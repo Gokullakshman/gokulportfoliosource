@@ -2,7 +2,7 @@
     <div>
       <v-row>
             <v-col cols="12" md="12" class="d-flex justify-end pr-10">
-                <v-icon  color="black" large @click="setActive('About')">mdi-arrow-up-circle</v-icon>
+                <v-icon outlined @mouseleave="arrowcolor = 'black'"  :color="arrowcolor" large @click="setActive('About')" @mouseover="arrowcolor = 'gold'">mdi-arrow-up-circle</v-icon>
             </v-col>
       
       </v-row>
@@ -20,7 +20,7 @@
       outlined
      
       class=" white--text text-center black"
-      width="1900"
+      width="100%"
     >
       <v-card-text>
          <!-- :color="hoveredindex == index ? 'currentcolor' : 'defaultcolor'" -->
@@ -44,12 +44,14 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        <v-col cols="12">
+        <v-col sm="12" >
+          <!-- :color="hoveredlink == index ?'#C5B358' : undefined" -->
             <v-btn
           v-for="(link,index) in links"
           :key="link"
-          class="white--text sansfooter"
-          :class="{'mx-12':$vuetify.breakpoint.mobile,'mx-4':$vuetify.breakpoint.mdandUp,'black--text':hoveredlink == index}"
+         color="#C5B358"
+          class="sansfooter"
+          :class="{'mx-14':$vuetify.breakpoint.mobile,'white--text':hoveredlink == index}"
           text
            @click="setActive(link)"
            @mouseover="SetHoveredLink(index)"
@@ -66,7 +68,9 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        <v-icon color="green">mdi-whatsapp</v-icon>&nbsp; <strong  class="white--text">+91 6383163259</strong>
+        <v-icon small color="red">mdi-gmail</v-icon>&nbsp; <strong  class="white--text caption">gokulkarthi6383@gmail.com</strong><br>
+        <v-icon small color="green">mdi-whatsapp</v-icon>&nbsp; <strong  class="white--text caption">+91 6383163259</strong>
+        
       </v-card-text>
     </v-card>
   </v-footer>
@@ -116,13 +120,13 @@
       ],
       hoveredlink:null,
       currentcolor:"",
-      currentindex:null,
       hoveredindex:null,
-      defaultcolor:"white"
+      defaultcolor:"white",
+      arrowcolor:"black"
     }),
     methods:{
       setActive(item) {
-  this.activeItem = item;
+   this.$store.state.navFlag = item
 
   // Get the target section by ID
   const targetSection = document.getElementById(item.toLowerCase());
@@ -148,8 +152,6 @@
         this.hoveredlink = null
     },
     getcolor(index){
-      console.log("this.socialmedia[index].color",this.socialmedia[index].color)
-       
         this.currentcolor= this.socialmedia[index].color
         this.hoveredindex = index
      

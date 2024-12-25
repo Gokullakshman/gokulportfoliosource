@@ -2,7 +2,7 @@
   <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right" >
     <v-container fill-height  id="about" :style="$vuetify.breakpoint.mdAndUp ? {'height':'100vh'} : 'dd'" :class="{'mt-12' :$vuetify.breakpoint.mobile}">
 
-  
+
 <v-row class="mt-2 d-flex justify-space-around" >
   <v-col
     md="6"
@@ -10,12 +10,12 @@
     :class="{'d-flex justify-end pl-10 text-center text-h6':$vuetify.breakpoint.mdAndUp,
       'd-flex justify-end pl-10  text-center text-h6 pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
     v-show="$vuetify.breakpoint.mdAndUp"
-  >   
+  >
         <v-col column cols="12" :class="{'mt-7':$vuetify.breakpoint.mdAndUp}">
-          <p  class="sanslight"> 
+          <p  class="sanslightweb"> 
             <span class="sansbold" :style="$vuetify.breakpoint.mobile ? {'font-size':'29px'} : 'd'"  style="color: #C5B358;">Hi,Iam Gokul S</span>
-          <span class="font-weight-bold d-flex justify-center ma-4  black--text" :class="{'display-1' :$vuetify.breakpoint.mdAndUp}"><vue-typer
-  :text='["Full Stack Developer","Vue js","Golang","MySQL"]'
+          <span  :style="$vuetify.breakpoint.mobile ? {'font-size':'20px'} : 'd'" class="font-weight-bold  d-flex justify-center ma-4  black--text" :class="{'text-h6' :$vuetify.breakpoint.mdAndUp}"><vue-typer
+  :text='["FullStack Developer","Vue js","Golang","MySQL"]'
   :repeat='Infinity'
   :shuffle='false'
   initial-action='typing'
@@ -34,7 +34,7 @@
        
           
          </p> 
-         <v-btn   outlined large color="black" class="black--text sansbold" style="font-size: 13px;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
+         <v-btn width="200"   outlined large class="white--text sanslight" style="font-size: 13px; background-color: #C5B358;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       
@@ -47,21 +47,17 @@
  
   </v-col>
 
-  <!-- <v-col cols="12" md="12" :class="{'d-flex justify-center order-2 ':$vuetify.breakpoint.mobile ,'d-flex justify-start':$vuetify.breakpoint.mdAndUp
-  }">
-    <v-btn large rounded color="#854CE6" class="white--text"  d-block >View My Resume</v-btn>
-  </v-col> -->
-  
+
 
   <v-col cols="12" xs="12" md="6" :class="{
-      'd-flex justify-center ml-4 mt-4 ': $vuetify.breakpoint.xsOnly,
-      
+      'd-flex justify-center align-center ml-4 mt-4 ': $vuetify.breakpoint.xsOnly,
+      'd-flex justify-center ml-4 mt-4 ': $vuetify.breakpoint.width>758 && $vuetify.breakpoint.width<1000 ,
       'd-flex justify-end ': !$vuetify.breakpoint.xsOnly,
-      'order-1':$vuetify.breakpoint.mdAndUp,'order-0':$vuetify.breakpoint.mobile
+      'order-1':$vuetify.breakpoint.mdAndUp,'order-0 d-flex mt-4':$vuetify.breakpoint.mobile
     }" no-gutters>
     <v-img
       lazy-src="../assets/developer.png"
-      :height="($vuetify.breakpoint.mobile ? '213px' : ($vuetify.breakpoint.md ? '300px' : '433px'))"
+      :height="($vuetify.breakpoint.mobile ? '223px' : ($vuetify.breakpoint.md ? '300px' : '433px'))"
       max-width="362"
       src="../assets/developer.png"
     ></v-img>
@@ -84,17 +80,14 @@
 <script>
 import { VueTyper } from 'vue-typer'
 export default{
-  methods:{
-    viewResume() {
-      // Replace the URL below with the actual path to your resume file
-      const resumeUrl = "../assets/GokulResume.pdf";
-      window.open(resumeUrl, "_blank");
-    }
-
-  },
   components:{
     VueTyper
-  }
+  },
+
+ 
+  
+   
+  
   
 }
 
@@ -102,30 +95,26 @@ export default{
 <style scoped>
 
 
-.text-paragraph {
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: -.009375rem;
-    --tw-text-opacity: 1;
-    color: rgb(77 77 77 / var(--tw-text-opacity));
-}
+
 .sanslight {
   font-family: "Open Sans", sans-serif;
-  font-weight: 220;
+  font-weight: 230;
+  font-size: 17px;
+}
+.sanslightweb{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 230;
   font-size: 20px;
 }
 
 .sansbold {
   font-family: "Open Sans", sans-serif;
   font-weight: 900;
-  font-size: 39px;
+  font-size: 35px;
   text-transform: capitalize
 }
 
-.sansitalic {
-  font-family: "Open Sans", sans-serif;
-  font-style: italic;
-}
+
 .vue-typer {
   font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
 }
@@ -142,14 +131,5 @@ export default{
 .vue-typer .custom.caret {
   display: none;
 }
-/* color: rgba(2, 3, 34, .6);
-    font-family: var(--rr-ff-body);
-        color: var(--rr-text-body);
-        font-weight: var(--rr-fw-regular);
-        font-size: 14px;
-       
-        line-height: 1.4;  kathiravan*/
-
-
 
 </style>

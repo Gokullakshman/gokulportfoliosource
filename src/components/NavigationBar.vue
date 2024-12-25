@@ -9,8 +9,8 @@
               <v-col cols="6" class="mt-4">
                 <v-icon large color="black">mdi-face-man-profile</v-icon
                 >&nbsp;&nbsp;
-                <span class="black--text"
-                  ><vgl-wave text="Portfolio"></vgl-wave
+                <span class="sansfooter"
+                  ><vgl-wave text="PORTFOLIO"></vgl-wave
                 ></span>
               </v-col>
               <v-spacer></v-spacer>
@@ -21,7 +21,7 @@
                  @click.stop="Drawer = !Drawer"
                 ></v-app-bar-nav-icon> -->
               </v-col>
-              <NavigationVue :Drawer="Drawer" @drawerclose="Drawer=false"  />
+              <!-- <NavigationVue :Drawer="Drawer" @drawerclose="Drawer=false"  /> -->
             </v-row>
           </v-col>
         </v-row>
@@ -49,7 +49,7 @@
                   text
                   :class="{
                     'black white--text rounded-lg': blackcolorindex == index,
-                    'black white--text rounded-lg': activeItem == n ,
+                    'black white--text rounded-lg': $store.state.navFlag == n ,
                     
                   }"
                   @mouseover="mapBlackColor(index)"
@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import NavigationVue from '../components/NavigationVue.vue';
+// import NavigationVue from '../components/NavigationVue.vue';
 
 export default {
   data() {
@@ -83,14 +83,14 @@ export default {
       blackcolorindex: null,
     };
   },
-  components: {
-     NavigationVue,
-  },
+  // components: {
+  //    NavigationVue,
+  // },
 
   methods: {
     setActive(item) {
-  console.log("item", item);
   this.activeItem = item;
+  this.$store.state.navFlag = item
 
   // Get the target section by ID
   const targetSection = document.getElementById(item.toLowerCase());
@@ -113,16 +113,7 @@ export default {
     mapBlackColor(index) {
       this.blackcolorindex = index;
     },
-    Drawertrue(){
-      this.$drawer = true
-      console.log("this.$drawer",this.$drawer)
-    }
   },
-  mounted:{
-    call(){
-      console.log(this.$drawer)
-    }
-  }
 };
 </script>
 
@@ -137,16 +128,7 @@ export default {
   }
 }
 
-.custom-outline {
-  border: 3px solid #854ce6;
-  color: black;
-}
 
-.border {
-  color: rgba(242, 243, 244, 0.5);
-  border: 1px solid rgba(242, 243, 244, 0.5);
-  border-radius: 12px;
-}
 
 ul {
   list-style: none;
@@ -175,14 +157,14 @@ ul li:hover {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it appears above other elements */
+  z-index: 1000; 
   background-color: rgba(
     242,
     243,
     247,
     1
-  ); /* Set background color to match your design */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  ); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 .sansfooter{
 

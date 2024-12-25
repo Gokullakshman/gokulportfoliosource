@@ -58,8 +58,6 @@ export default {
   },
   watch: {
     Drawer(newval) {
-      console.log("drawer")
-      console.log("drawer",newval)
       this.drawer = newval;
      
       this.toggleBodyScroll(newval); 

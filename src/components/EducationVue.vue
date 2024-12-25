@@ -80,16 +80,7 @@
           <v-row> </v-row>
         </v-card>
       </v-col>
-      <!-- <v-col class="md-3 d-flex justify-start">
-                    <v-timeline  >
-        <v-timeline-item small>timeline item</v-timeline-item>
-        <v-timeline-item 
-        small class="text-right">
-        timeline item
-        </v-timeline-item>
-        <v-timeline-item small>timeline item</v-timeline-item>
-    </v-timeline>
-                </v-col> -->
+     
     </v-row>
   </div>
 </template>
@@ -126,37 +117,20 @@ export default {
             "I completed my class 10 education at Vallalar Hr.Secondary School,Kumbakonam.",
         },
       ],
-      Activehover: false,
       ActiveIndex: null,
     };
   },
 };
 </script>
 <style scoped>
-.transparent-card {
-  background-color: transparent !important; /* Make the background fully transparent */
-  border: 4px solid #000000;
-  border-radius: 4px;
-  /* Add a green outline similar to the one in your image */
-}
-.hover-card {
-  background-color: transparent !important;
-  border: 2px solid #444444; /* Default border color */
-  transition: border-color 0.1s ease, background-color 0.3s ease;
-}
+
 
 .active-hover {
   border-color: #000000 !important; /* Green border on hover */
   background-color: rgba(0, 255, 0, 0.1); /* Light green background on hover */
   transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
-/* .customeducationtext{
-    color: rgba(2, 3, 34, .6);
-    font-family: wfont_1f4e5a_a4dab464d39a4954a3f7d14cdb48d3ed, wf_a4dab464d39a4954a3f7d14cd, orig_wix_madefor_display_regular;
-    font-size: max(0.5px, 0.0416667*(var(--scaling-factor) - var(--scrollbar-width)));
-    text-decoration: none;
 
-} this is okay now for comment for other sedigns      */
 .sanslightDescribeEducation {
   font-family: "Open Sans", sans-serif;
   font-weight: 450;

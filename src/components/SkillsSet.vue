@@ -160,30 +160,14 @@ class="rounded-lg"
 
 <style >
 
- .Heading{
-  font-size: 28px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    font-family: "Inter VF", "Inter", sans-serif;
- }
- .headingH6{
-  font-size: 10px;
-    font-weight: 600;
-    color: rgb(177, 178, 179);
-    font-family: Poppins, sans-serif;
- }
+
 
  
 
-.hover-card {
-  background-color: transparent  !important;
-  border: 2px solid #444444; /* Default border color */
-  transition: border-color 0.1s ease, background-color 0.3s ease;
-}
 
 .active-hover {
   border-color: #000000 !important; /* Green border on hover */
-  background-color: rgba(0, 0, 0, 0); /* Light green background on hover */
+  background-color: rgba(15, 9, 9, 0); /* Light green background on hover */
   transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 .sansboldtitle {
@@ -191,13 +175,7 @@ class="rounded-lg"
   font-weight: 520;
   font-size: 30px;
 }
-.sanslightDescribe {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 490;
-  font-size: 16px;
-  
-  font-style:var();
-}
+
 .sanssmall{
   font-family: "Open Sans", sans-serif;
   font-weight: 430;

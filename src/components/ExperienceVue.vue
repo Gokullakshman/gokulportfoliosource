@@ -16,8 +16,8 @@
             <v-col class="d-flex justify-center mb-6">
                 <v-card rounded outlined style="background-color: rgba(242, 243, 247, 0.3);"  class="rounded-lg"
                     :class="{ 'active-hover': expand }" @mouseover="expand = true" @mouseleave="expand = false"
-                    :width="$vuetify.breakpoint.mdAndUp ? '600' : '350'"
-                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '490' : '740') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
+                    :width="$vuetify.breakpoint.mdAndUp ? '640' : '350'"
+                    :height="expand ? ($vuetify.breakpoint.mdAndUp ? '570' : '1030') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
                     <v-row>
                         <v-col cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                             <v-sheet color="white" elevation="9" height="35" outlined rounded shaped width="35"><v-img
@@ -39,7 +39,7 @@
                         </v-col>
                         <v-col cols="12" md="12" xs="12" class="pl-4">
                             <span class="sansbold" >Skills:
-                              <span :style="{ 'font-family': 'Open Sans, sans-serif','font-size':'14px'}">• Vuejs
+                              <span :style="{ 'font-family': 'Open Sans, sans-serif','font-size':'12px'}">• Vuejs
                                 • Vuetify
                                 • Golang
                                 • MySQL
@@ -70,7 +70,7 @@ export default {
     data() {
         return {
             truncatetext: "In my current role as a full-stack web developer, I am actively involved in developing a bug tracking system that allows employees to raise tickets for issues they encounter. This system streamlines the process of identifying and resolving bugs, enhancing overall productivity and collaboration within the....",
-            fulltext: "In my current role as a full-stack web developer, I am actively involved in developing a bug tracking system that allows employees to raise tickets for issues they encounter. This system streamlines the process of identifying and resolving bugs, enhancing overall productivity and collaboration within the teamAdditionally, I work on a release management feature where employees can submit requests, specifying the branch name and repository for their changes. This functionality ensures that all code updates are organized and easily accessible, facilitating a smoother transition to live environments.By implementing these systems, I contribute to improving workflow efficiency and ensuring that our development processes are transparent and well-managed. My experience in this role has deepened my understanding of both front-end and back-end development, as well as the importance of effective communication within a team. I am committed to delivering high-quality solutions that meet the needs of our users and support the company's goals",
+            fulltext: "In my current role as a full-stack web developer, I am actively involved in developing a bug tracking system that allows employees to raise tickets for issues they encounter. This system streamlines the process of identifying and resolving bugs, enhancing overall productivity and collaboration within the teamAdditionally, I work on a release management feature where employees can submit requests, specifying the branch name and repository for their changes. This functionality ensures that all code updates are organized and easily accessible, facilitating a smoother transition to live environments.Developed a project management system to list company projects, assign agents and business owners, track tasks, monitor progress, and upload project-related documents. Worked a system for idea submission and evaluation, where a decision-maker assesses and transitions viable ideas into projects, which converts into actionable initiatives, while tracking rejected onesBy implementing these systems, I contribute to improving workflow efficiency and ensuring that our development processes are transparent and well-managed. My experience in this role has deepened my understanding of both front-end and back-end development, as well as the importance of effective communication within a team. I am committed to delivering high-quality solutions that meet the needs of our users and support the company's goals",
             expand: false
         }
     },
@@ -79,12 +79,7 @@ export default {
 }
 </script>
 <style >
-.hover-card {
-    background-color: transparent !important;
-    border: 2px solid #444444;
-    /* Default border color */
-    transition: border-color 0.1s ease, background-color 0.3s ease;
-}
+
 
 .active-hover {
     border-color: #000000 !important;
@@ -95,16 +90,7 @@ export default {
     /* Smooth transition */
 }
 
-.customeducationtext {
-    color: rgba(2, 3, 34, .6);
-    font-family: var(--rr-ff-body);
-    color: var(--rr-text-body);
-    font-weight: var(--rr-fw-regular);
-    font-size: 14px;
 
-    line-height: 1.4;
-
-}
 
 .sanslightDescribeExperience {
     font-family: "Open Sans", sans-serif;
@@ -116,7 +102,7 @@ export default {
 .sanslight {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
 }
 .sanslightdesk{
     font-family: "Open Sans", sans-serif;

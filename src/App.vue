@@ -3,7 +3,7 @@
 >
 
  
-    <MainVue />
+    <MainVue  class="scrollbar"/>
 
   </v-app>
 </template>
@@ -46,6 +46,25 @@ html, body {
 .main-layout {
   overflow-y: auto; /* Ensure content scrolls only within the main area */
   height: 100vh; /* Fit the viewport height */
+}
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px; /* Adjust the width of the scrollbar */
+  height: 6px; /* Adjust the height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 1px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Track color */
+  border-radius: 1px;
 }
 
 </style>

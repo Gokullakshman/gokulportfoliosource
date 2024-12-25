@@ -11,7 +11,6 @@ const api = axios.create({
 
 export default{
     sendEmail(input){
-        console.log(input)
         return api.post("/sendemail",input)
     },
 }

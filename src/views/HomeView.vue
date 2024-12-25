@@ -1,5 +1,5 @@
 <template>  
-<div fill-height class="" >  
+<div fill-height  >  
 
 
       
@@ -21,7 +21,6 @@
   </v-col>
  </v-row> -->
        
-       <ToastVue v-if="Toast"></ToastVue>
 
 
       </div>
@@ -39,69 +38,19 @@ import EducationVue   from '../components/EducationVue.vue';
 import ContactVue  from '../components/ContactVue.vue';
 // import Navigation from '../components/Navigation.vue'
 
-import ToastVue from '../components/ToastVue.vue'
 import ExperienceVue from '../components/ExperienceVue.vue'
 import FooterVue from '../components/FooterVue.vue'
   export default {
-    data () {
-      return {
-        Toast:false,
-        Drawer: false,
-        items: [
-          { title: 'About', icon: 'mdi-view-dashboard' },
-          { title: 'Skills', icon: 'mdi-forum' },
-          { title: 'Experience', icon: 'mdi-forum' },
-          { title: 'Contact', icon: 'mdi-forum' },
-          { title: 'Github Profile', icon: 'mdi-forum' },
-          { title: 'Linkedin profile', icon: 'mdi-forum' },
-          { title: 'Github Profile', icon: 'mdi-forum' },
-        ],
-        items1: [
-        ["mdi-home", "About"],
-        ["mdi-account", "Skills"],
-        ["mdi-settings", "Experience"],
-        ["mdi-information", "Contact"],
-      ],
-      }
-    },
     components:{
       HelloImage,
       SkillsSet,
-      ToastVue,
       ExperienceVue,
       EducationVue,
       ContactVue,
       FooterVue
       // Navigation
     },
-    navigateToContact() {
-      this.$router.push({ path: "/", hash: "#contact" }); // Navigates to the contact section
-    },
-    mounted(){
-      setTimeout(
-        this.$toast({
-  component: ToastVue,
-  listeners: {
-    myClick: () => this.$toast.success("Hi have a nice Day!!")
-  }
-}, {
-  position: "bottom-right",
-  timeout: 3000,
-  closeOnClick: false,
-  pauseOnFocusLoss: true,
-  pauseOnHover: true,
-  draggable: true,
-  draggablePercent: 0.6,
-  showCloseButtonOnHover: false,
-  hideProgressBar: true,
-  closeButton: "button",
-  icon: false,
-  rtl: false
-})
-
-     , 3700)
-
-      }
+  
     }
 
 </script>

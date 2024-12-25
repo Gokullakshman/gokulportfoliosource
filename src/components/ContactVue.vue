@@ -3,7 +3,7 @@
 <template>
     <div id="contact">
        
-        <v-row class="pt-10" data-aos="zoom-in">
+        <v-row class="pt-10" >
             <v-col cols="12" md="12" xs="12" >
                 <span class="black--text d-flex justify-center sansboldtitle">Get in touch</span>
             </v-col>
@@ -13,7 +13,7 @@
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
                 <v-card  rounded outlined   :width="$vuetify.breakpoint.mdAndUp ? '550':'390'"  
-                :height ="$vuetify.breakpoint.mdAndUp ? '540':'560'" >
+                :height ="$vuetify.breakpoint.mdAndUp ? '540':'560'" data-aos="zoom-in" >
 
                 <v-row class="mt-6">
                     <v-col cols="12" md="12" xs="12">
@@ -66,7 +66,24 @@
           
 
             </v-col>
-        </v-row> 
+        </v-row>  
+        <v-snackbar
+      v-model="snackbar"
+      timeout="3000"
+    >
+      {{ Emailtext }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
       
      
 
@@ -74,6 +91,7 @@
 </template>
 <script>
 // import EventService from '@/services/EventService';
+
 import emailjs from "emailjs-com";
 
 export default{
@@ -85,36 +103,50 @@ export default{
                 subject:"",
                 description:""
             },
-            SendButton:false
+            SendButton:false,
+            snackbar:false,
+            Emailtext:"",
+            concatmessage:"",
+            res:""
         }
     },
 
     methods:{
         SendEmailProcess(){
-            if(this.mailDetails.youremail=="" || this.mailDetails.subject == "" ){
+            if((this.mailDetails.youremail=="" && this.mailDetails.yourname == "") || ( this.mailDetails.subject == "" )){
+                this.Emailtext = "Please provide your email or name and subject"
+                this.snackbar = true
                 return
             }else{
-                const serviceID = "service_i3w46j3"; // Replace with your Email Service ID
-      const templateID = "template_d3u4f5q"; // Replace with your Template ID
-      const userID = "P2Yzwj4FQdA8B7zyi"; // Replace with your User ID
+                const serviceID = "service_i3w46j3"; 
+      const templateID = "template_d3u4f5q"; 
+      const userID = "P2Yzwj4FQdA8B7zyi";  
+      this.concatmessage = "Subject : "+this.mailDetails.subject + "Description : "+ this.mailDetails.description + " FromMail : " + this.mailDetails.youremail
+
 
       const templateParams = {
         from_name: this.mailDetails.yourname,
         from_email: this.mailDetails.youremail,
         to_name:"gokulkarthi6383@gmail.com",
-        message: this.mailDetails.description
+        message:this.concatmessage
       };
-
+      
       emailjs
         .send(serviceID, templateID, templateParams, userID)
         .then(
           (response) => {
-            console.log("Email sent successfully:", response.status, response.text);
-            alert("Email sent!");
+           this.snackbar = true
+           this.res = response
+           this. mailDetails.youremail = ""
+          this. mailDetails. yourname=""
+          this. mailDetails.subject= ""
+          this. mailDetails. description = ""
+          this.Emailtext = "Email sent successfully!!!"
           },
           (error) => {
-            console.error("Failed to send email:", error);
-            alert("Failed to send email. Please try again.");
+            this.Emailtext = "Something went wrong"
+            this.res= error
+            this.snackbar = true
           }
         );
   
@@ -178,6 +210,13 @@ padding: 10px;
 :-ms-input-placeholder { 
 padding: 10px;
 }
+::-webkit-textarea-placeholder { 
+padding: 10px;
+}
+
+:-ms-textarea-placeholder { 
+padding: 10px;
+}
 input {
   padding-left: 10px; /* Matches placeholder padding */
   font-weight: 300;
@@ -194,5 +233,22 @@ input::placeholder {
   letter-spacing: -0.009375rem;
   color: rgb(77 77 77 / var(--tw-text-opacity)); /* Placeholder color */
 }
+
+textarea{
+    padding-left: 10px; /* Matches placeholder padding */
+  font-weight: 300;
+  line-height: 220%;
+  letter-spacing: -0.009375rem;
+  --tw-text-opacity: 4;
+  color: rgb(77 77 77 / var(--tw-text-opacity));
+}
+textarea::placeholder{
+    padding-left: 0; /* No extra padding for placeholder */
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.009375rem;
+  color: rgb(77 77 77 / var(--tw-text-opacity)); /* Placeholder color */
+}
+
 
 </style>
