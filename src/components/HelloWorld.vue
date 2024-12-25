@@ -1,35 +1,44 @@
 <template>
+  <div style="background-color: rgba(242, 243, 247, 1);" data-aos="fade-right" >
+    <v-container fill-height  id="about" :style="$vuetify.breakpoint.mdAndUp ? {'height':'100vh'} : 'dd'" :class="{'mt-12' :$vuetify.breakpoint.mobile}">
 
-    <v-container fill-height   >
 
-  
-<v-row class="mt-10 d-flex justify-space-around">
+<v-row class="mt-2 d-flex justify-space-around" >
   <v-col
     md="6"
     xs="12"
     :class="{'d-flex justify-end pl-10 text-center text-h6':$vuetify.breakpoint.mdAndUp,
-      'd-flex justify-end pl-10 black text-center pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
+      'd-flex justify-end pl-10  text-center text-h6 pa-9':$vuetify.breakpoint.mobile,'order-0':$vuetify.breakpoint.mdAndUp,'order-1':$vuetify.breakpoint.mobile }"
     v-show="$vuetify.breakpoint.mdAndUp"
-  >   
-        <v-col column cols="12">
-          <p style=" color: rgb(177, 178, 179);"> 
-          <span class=" white--text display-1 font-weight-bold d-flex justify-center mb-4">Hi,I am Gokul S</span>
-          
-          As a full-stack web developer
-          with a passion for blockchain and finance, I leverage my diverse
-          expertise to craft innovative solutions. With a background in
-          mentorship and multiple project experiences, I bring versatility and
-          a commitment to excellence to every endeavor. Continuously seeking
-          growth and learning, I aim to make a positive impact in the digital
-          realm through my creative contributions. 
+  >
+        <v-col column cols="12" :class="{'mt-7':$vuetify.breakpoint.mdAndUp}">
+          <p  class="sanslightweb"> 
+            <span class="sansbold" :style="$vuetify.breakpoint.mobile ? {'font-size':'29px'} : 'd'"  style="color: #C5B358;">Hi,Iam Gokul S</span>
+          <span  :style="$vuetify.breakpoint.mobile ? {'font-size':'20px'} : 'd'" class="font-weight-bold  d-flex justify-center ma-4  black--text" :class="{'text-h6' :$vuetify.breakpoint.mdAndUp}"><vue-typer
+  :text='["FullStack Developer","Vue js","Golang","MySQL"]'
+  :repeat='Infinity'
+  :shuffle='false'
+  initial-action='typing'
+  :pre-type-delay='100'
+  :type-delay='70'
+  :pre-erase-delay='2000'
+  :erase-delay='250'
+  erase-style='select-all'
+  :erase-on-complete='false'
+  caret-animation='blink'
+></vue-typer></span>
+          <span :class="{'sanslight':$vuetify.breakpoint.mobile}" class="pa-4">
+            As a full-stack web developer with one year of experience in web development, I leverage my diverse skill set to create innovative and effective solutions. With extensive project experience, I bring versatility and a commitment to excellence to every project I undertake. I am dedicated to continuous growth and learning, aiming to make a positive impact in the digital landscape through my creative contributions. 
+
+          </span>
+       
           
          </p> 
-         <v-btn rounded large color="#854CE6" class="white--text" :block="$vuetify.breakpoint.mobile">View my Resume</v-btn>
+         <v-btn width="200"   outlined large class="white--text sanslight" style="font-size: 13px; background-color: #C5B358;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       
        
-
         
 
         
@@ -38,35 +47,89 @@
  
   </v-col>
 
-  <!-- <v-col cols="12" md="12" :class="{'d-flex justify-center order-2 ':$vuetify.breakpoint.mobile ,'d-flex justify-start':$vuetify.breakpoint.mdAndUp
-  }">
-    <v-btn large rounded color="#854CE6" class="white--text"  d-block >View My Resume</v-btn>
-  </v-col> -->
-  
+
 
   <v-col cols="12" xs="12" md="6" :class="{
-      'd-flex justify-center black': $vuetify.breakpoint.xsOnly,
+      'd-flex justify-center align-center ml-4 mt-4 ': $vuetify.breakpoint.xsOnly,
+      'd-flex justify-center ml-4 mt-4 ': $vuetify.breakpoint.width>758 && $vuetify.breakpoint.width<1000 ,
       'd-flex justify-end ': !$vuetify.breakpoint.xsOnly,
-      'order-1':$vuetify.breakpoint.mdAndUp,'order-0':$vuetify.breakpoint.mobile
-    }">
+      'order-1':$vuetify.breakpoint.mdAndUp,'order-0 d-flex mt-4':$vuetify.breakpoint.mobile
+    }" no-gutters>
     <v-img
-      lazy-src="https://sirancheevi.com/static/media/portfolio.9ab12bcb3d562306dd3e.png"
-      max-height="283"
+      lazy-src="../assets/developer.png"
+      :height="($vuetify.breakpoint.mobile ? '223px' : ($vuetify.breakpoint.md ? '300px' : '433px'))"
       max-width="362"
-      src="https://sirancheevi.com/static/media/portfolio.9ab12bcb3d562306dd3e.png"
+      src="../assets/developer.png"
     ></v-img>
   </v-col>   
-
+  <!-- :height="$vuetify.breakpoint.mobile ? '213' :'433'" -->
 
 </v-row>   
 
-<v-row class="black">
-  <v-col  xs="12" md="6" row class="d-flex justify-center">
-  
-  </v-col>
-</v-row>
+
+
 
 </v-container>
 
+
+  </div>
+ 
  
 </template>
+
+<script>
+import { VueTyper } from 'vue-typer'
+export default{
+  components:{
+    VueTyper
+  },
+
+ 
+  
+   
+  
+  
+}
+
+</script>
+<style scoped>
+
+
+
+.sanslight {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 230;
+  font-size: 17px;
+}
+.sanslightweb{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 230;
+  font-size: 20px;
+}
+
+.sansbold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  text-transform: capitalize
+}
+
+
+.vue-typer {
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+}
+
+.vue-typer .custom.char.typed {
+  color: #607D8B;
+}
+.vue-typer .custom.char.selected {
+  color: #607D8B;
+  background-color: transparent;
+  text-decoration: line-through;
+}
+
+.vue-typer .custom.caret {
+  display: none;
+}
+
+</style>
