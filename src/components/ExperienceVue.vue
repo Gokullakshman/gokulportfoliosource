@@ -21,7 +21,7 @@
                     <v-row>
                         <v-col cols="12" md="12" xs="12" class="d-flex align-center ml-4">
                             <v-sheet color="white" elevation="9" height="35" outlined rounded shaped width="35"><v-img
-                                    src="../assets/flattrade.png"></v-img></v-sheet>
+                                    src="@/assets/flattrade.png"></v-img></v-sheet>
                             <span class=" pl-4 font-weight-bold mt-4 black--text">Software Developer <br> <span
                                     class="black--text caption">Flattrade</span>
                                 <br><span class="caption">March 2024 -Till</span></span>
