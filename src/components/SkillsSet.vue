@@ -74,7 +74,7 @@ style="background-color: rgba(242, 243, 247, 0.3);"
 ><v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-6"><span class="sanslight" style=" font-weight: 300;  font-size: 27px;">Backend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="black--text sanssmall">Java</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="@/assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="black--text sanssmall">Java</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-go</v-icon><span class="black--text sanssmall">Golang </span></v-chip>
@@ -108,10 +108,10 @@ class="rounded-lg"
 ><v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sanslight" style=" font-weight: 300;  font-size: 27px;">Other Tools</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="../assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text sanssmall">Git</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="@/assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text sanssmall">Git</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label><v-img src="../assets/github.png" height="18" width="18" class="pa-4"></v-img><span class="black--text sanssmall">Github</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label><v-img src="@/assets/github.png" height="18" width="18" class="pa-4"></v-img><span class="black--text sanssmall">Github</span></v-chip>
 </v-col>
 </v-row>
 
@@ -120,11 +120,11 @@ class="rounded-lg"
 <v-row class="mt-1"> 
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" height="20" label><v-img src="../assets/postman.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">Postman</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" height="20" label><v-img src="@/assets/postman.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">Postman</span></v-chip>
 </v-col> 
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center ':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white"  label><v-img src="../assets/Vs.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">VSCode</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white"  label><v-img src="@/assets/Vs.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">VSCode</span></v-chip>
 </v-col>
 </v-row>
 

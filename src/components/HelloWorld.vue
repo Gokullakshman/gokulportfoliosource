@@ -56,10 +56,10 @@
       'order-1':$vuetify.breakpoint.mdAndUp,'order-0 d-flex mt-4':$vuetify.breakpoint.mobile
     }" no-gutters>
     <v-img
-      lazy-src="../assets/developer.png"
+      lazy-src="@/assets/developer.png"
       :height="($vuetify.breakpoint.mobile ? '223px' : ($vuetify.breakpoint.md ? '300px' : '433px'))"
       max-width="362"
-      src="../assets/developer.png"
+      src="@/assets/developer.png"
     ></v-img>
   </v-col>   
   <!-- :height="$vuetify.breakpoint.mobile ? '213' :'433'" -->
