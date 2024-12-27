@@ -7,7 +7,7 @@
             </v-col>
             <v-col cols="12" md="12" xs="12" class="d-flex justify-center">
                 <p class="text-center sanslightDescribeExperience"
-                    :class="{ 'text-paragraph': $vuetify.breakpoint.mdAndUp }" style="max-width: 600px;">Here I present my journey as a full-stack web developer, highlighting my extensive experience and skills. Through my portfolio, I showcase the diverse technologies I've mastered, demonstrating my expertise in web development and beyond.</p>
+                    :class="{ 'text-paragraph': $vuetify.breakpoint.mdAndUp,'pl-2 pr-2':$vuetify.breakpoint.mobile }" style="max-width: 600px;">Here I present my journey as a full-stack web developer, highlighting my extensive experience and skills. Through my portfolio, I showcase the diverse technologies I've learned, demonstrating my expertise in web development and beyond.</p>
             </v-col>
 
         </v-row>
@@ -20,11 +20,11 @@
                     :height="expand ? ($vuetify.breakpoint.mdAndUp ? '570' : '1030') : ($vuetify.breakpoint.mdAndUp ? '260' : '360')">
                     <v-row>
                         <v-col cols="12" md="12" xs="12" class="d-flex align-center ml-4">
-                            <v-sheet color="white" elevation="9" height="35" outlined rounded shaped width="35"><v-img
+                            <v-sheet elevation="7" height="35" outlined rounded shaped width="35"><v-img
                                     src="@/assets/flattrade.png"></v-img></v-sheet>
-                            <span class=" pl-4 font-weight-bold mt-4 black--text">Software Developer <br> <span
+                            <span class=" pl-4 font-weight-bold mt-4 black--text">Full Stack Developer <br> <span
                                     class="black--text caption">Flattrade</span>
-                                <br><span class="caption">March 2024 -Till</span></span>
+                                <br><span class="caption">March 2024 -Present</span></span>
                         </v-col>
                     </v-row>
 

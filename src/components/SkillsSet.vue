@@ -29,10 +29,10 @@ class="rounded-lg"
 <v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sanslight" style=" font-weight: 370;  font-size: 27px;">Frontend</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="green">mdi-vuejs</v-icon><span class="black--text sanssmall">VueJs</span></v-chip>
+ <v-icon large color="green">mdi-vuejs</v-icon><span class="black--text sanssmall pt-1">VueJs</span>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="yellow">mdi-language-javascript</v-icon><span class="black--text sanssmall">Javascript</span></v-chip>
+ <v-icon large color="yellow">mdi-language-javascript</v-icon><span class="black--text sanssmall pt-1 pl-1">Javascript</span>
 </v-col>
 </v-row>
 
@@ -40,13 +40,13 @@ class="rounded-lg"
 
 <v-row class="mt-1">
 <v-col  xs="6" md="6"  :class="{'d-flex justify-end  ':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="orange">mdi-language-html5</v-icon><span class="black--text sanssmall">HTML</span></v-chip>
+<v-icon large color="orange">mdi-language-html5</v-icon><span class="black--text sanssmall pt-1 pl-1">HTML</span>
 </v-col>
 <v-col  xs="6" md="6"  :class="{'d-flex justify-start':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-css3</v-icon><span class="black--text sanssmall">CSS</span></v-chip>
+ <v-icon large color="info">mdi-language-css3</v-icon><span class="black--text sanssmall pt-1 pl-1">CSS</span>
 </v-col>
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-vuetify</v-icon><span class="black--text sanssmall">Vuetify</span></v-chip>
+ <v-icon large color="info">mdi-vuetify</v-icon><span class="black--text sanssmall pt-1 pl-1">Vuetify</span>
 </v-col>
 </v-row>
 
@@ -77,7 +77,7 @@ style="background-color: rgba(242, 243, 247, 0.3);"
 <v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="@/assets/java.png" height="40" width="40" class="pa-4"></v-img><span class="black--text sanssmall">Java</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-language-go</v-icon><span class="black--text sanssmall">Golang </span></v-chip>
+ <v-icon large color="info">mdi-language-go</v-icon><span class="black--text sanssmall pl-1 pt-2">Golang </span>
 </v-col>
 </v-row>
 
@@ -86,7 +86,7 @@ style="background-color: rgba(242, 243, 247, 0.3);"
 <v-row class="mt-1">
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-icon large color="info">mdi-database</v-icon><span class="black--text sanssmall">MySQL</span></v-chip>
+<v-icon large color="info">mdi-database</v-icon><span class="black--text sanssmall pl-1 pt-1">MySQL</span>
 </v-col>
 </v-row>
 
@@ -108,10 +108,10 @@ class="rounded-lg"
 ><v-row >
 <v-col  xs="12" md="12" cols="12"  class="d-flex justify-center align-center pt-4"><span class="sanslight" style=" font-weight: 300;  font-size: 27px;">Other Tools</span> </v-col>
 <v-col  xs="12" md="6" cols="12"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile,'d-flex justify-end':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="@/assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text sanssmall">Git</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label> <v-img src="@/assets//git.png" height="35" width="35" class="pa-4"></v-img><span class="black--text sanssmall pl-1">Git</span></v-chip>
 </v-col>
 <v-col cols="12" xs="12" md="6"  :class="{'d-flex justify-center':$vuetify.breakpoint.mobile}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label><v-img src="@/assets/github.png" height="18" width="18" class="pa-4"></v-img><span class="black--text sanssmall">Github</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" label><v-img src="@/assets/github.png" height="18" width="18" class="pa-4"></v-img><span class="black--text sanssmall pl-1">Github</span></v-chip>
 </v-col>
 </v-row>
 
@@ -120,11 +120,11 @@ class="rounded-lg"
 <v-row class="mt-1"> 
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center mt-2':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" height="20" label><v-img src="@/assets/postman.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">Postman</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white" height="20" label><v-img src="@/assets/postman.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall pl-1">Postman</span></v-chip>
 </v-col> 
 
 <v-col  cols="12" xs="12" md="12" :class="{'d-flex justify-center ':$vuetify.breakpoint.mobile,'d-flex justify-center mt-1':$vuetify.breakpoint.mdAndUp}">
-<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white"  label><v-img src="@/assets/Vs.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall">VSCode</span></v-chip>
+<v-chip outlined  class="pa-3 pt-4 pb-4 pr-3 white"  label><v-img src="@/assets/Vs.png" height="2" width="2" class="pa-4"></v-img><span class="black--text sanssmall pl-1">VSCode</span></v-chip>
 </v-col>
 </v-row>
 

@@ -8,7 +8,7 @@
         <p
           style="max-width: 600px"
           class="sanslightDescribeExperience text-center d-flex justify-center"
-          :class="{ 'text-paragraph': $vuetify.breakpoint.mdAndUp }"
+          :class="{ 'text-paragraph': $vuetify.breakpoint.mdAndUp,'pl-2 pr-2':$vuetify.breakpoint.mobile }"
         >
           My education has been a journey of self-discovery and growth. My
           educational details are as follows.
@@ -38,7 +38,7 @@
           <v-row class="mt-2" no-gutters>
             <v-col md="1" xs="1" class="d-flex mt-8 ml-6">
               <v-sheet
-                color="white"
+                
                 elevation="9"
                 height="35"
                 outlined

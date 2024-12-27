@@ -14,8 +14,8 @@
         <v-col column cols="12" :class="{'mt-7':$vuetify.breakpoint.mdAndUp}">
           <p  class="sanslightweb"> 
             <span class="sansbold" :style="$vuetify.breakpoint.mobile ? {'font-size':'29px'} : 'd'"  style="color: #C5B358;">Hi,Iam Gokul S</span>
-          <span  :style="$vuetify.breakpoint.mobile ? {'font-size':'20px'} : 'd'" class="font-weight-bold  d-flex justify-center ma-4  black--text" :class="{'text-h6' :$vuetify.breakpoint.mdAndUp}"><vue-typer
-  :text='["FullStack Developer","Vue js","Golang","MySQL"]'
+          <span  :style="$vuetify.breakpoint.mobile ? {'font-size':'18px'} : 'd'" class="font-weight-bold  d-flex justify-center ma-4  black--text" :class="{'text-h6' :$vuetify.breakpoint.mdAndUp}"><vue-typer
+  :text='["FullStack Developer","Vue js","Vuetify","Golang","MySQL"]'
   :repeat='Infinity'
   :shuffle='false'
   initial-action='typing'
@@ -34,7 +34,7 @@
        
           
          </p> 
-         <v-btn width="200"   outlined large class="white--text sanslight" style="font-size: 13px; background-color: #C5B358;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'/GokulResume.pdf'">View my Resume</v-btn>
+         <v-btn width="200"   outlined large class="white--text sanslight" style="font-size: 13px; background-color: #C5B358;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'GokulResume.pdf'">View my Resume</v-btn>
         </v-col>
         
       

@@ -115,7 +115,7 @@ export default{
     methods:{
         SendEmailProcess(){
             if((this.mailDetails.youremail=="" && this.mailDetails.yourname == "") || ( this.mailDetails.subject == "" )){
-                this.Emailtext = "Please provide your email or name and subject"
+              this.Emailtext = "Kindly provide your email, name, and subject to proceed.";
                 this.snackbar = true
                 return
             }else{
