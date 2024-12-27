@@ -55,7 +55,8 @@
                        <textarea placeholder="Message" class="input" :style="$vuetify.breakpoint.mdAndUp? {height:'140px'} : {height:'130px',width:'310px'}" v-model="mailDetails.description"></textarea>
                     </v-col>
                     <v-col  xs="10" class="d-flex justify-center px-10">
-                       <v-btn  :outlined="!SendButton"  :class="{'white--text font-weight-light black': SendButton, 'black--text font-weight-bold' :!SendButton}" @mouseover="SendButton = true" @mouseleave="SendButton = false"  block height="40" @click="SendEmailProcess()">Send</v-btn>
+                       <v-btn v-if="$vuetify.breakpoint.mdAndUp" :outlined="!SendButton"  :class="{'white--text font-weight-light black': SendButton, 'black--text font-weight-bold' :!SendButton}" @mouseover="SendButton = true" @mouseleave="SendButton = false"  block height="40" @click="SendEmailProcess()">Send</v-btn> 
+                       <v-btn v-else  class="sanslight black white--text"  block height="40" @click="SendEmailProcess()">Send</v-btn>
                     </v-col>
                 </v-row>
 
