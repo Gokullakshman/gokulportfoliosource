@@ -34,7 +34,7 @@
        
           
          </p> 
-         <v-btn width="200"   outlined large class="white--text sanslight" style="font-size: 13px; background-color: #C5B358;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'https://docs.google.com/viewer?url=' + encodeURIComponent('https:// gokullakshman.github.io/gokulportfolio/GokulResume.pdf')">View my Resume</v-btn>
+         <v-btn width="200"   outlined large class="white--text sanslight" style="font-size: 13px; background-color: #C5B358;" :block="$vuetify.breakpoint.mobile"  target="_blank" :href="'https://docs.google.com/viewer?url=' + encodeURIComponent('https://gokullakshman.github.io/gokulportfolio/GokulResume.pdf?nocache=' + Date.now())">View my Resume</v-btn>
         </v-col>
         
       
