@@ -1,4 +1,4 @@
-# vuetifypratice
+# gokulportfolio
 
 ## Project setup
 ```
